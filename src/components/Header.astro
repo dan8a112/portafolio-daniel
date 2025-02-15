@@ -1,0 +1,22 @@
+---
+const currentPath = Astro.url.pathname; //Ruta actual
+---
+<header class="bg-background-bluedark shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Título (lado derecho) -->
+    <div class="text-right">
+        <h1 class="text-2xl font-bold text-primary-white">Daniel Ochoa</h1>
+    </div>
+
+      <!-- Opciones del menú (lado izquierdo) -->
+      <nav class="flex space-x-6 text-primary-white">
+        <a href="/" class={`hover:border-b-1 hover:border-secondary-yellow transition-colors 
+        ${currentPath === "/" ? "border-b-1 border-secondary-yellow" : ""}`}>Inicio</a>
+        <a href="/about" class={`hover:border-b-1 hover:border-secondary-yellow transition-colors 
+        ${currentPath === "/about" ? "border-b-1 border-secondary-yellow" : ""}`}>Habilidades</a>
+        <a href="/contact" class={`hover:border-b-1 hover:border-secondary-yellow transition-colors 
+        ${currentPath === "/contact" ? "border-b-1 border-secondary-yellow" : ""}`}>Proyectos</a>
+      </nav>
+    </div>
+  </header>
+  

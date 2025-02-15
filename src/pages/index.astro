@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+
+  <section class="py-12">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+      <!-- Contenido de texto (izquierda) -->
+      <div class="md:w-1/2 space-y-3">
+        <div>
+          <span class="text-3xl text-primary-white">Hola,</span>
+          <span class="text-3xl text-secondary-yellow">soy</span>
+          <h2 class="text-4xl font-bold text-secondary-yellow">Daniel Ochoa</h2>
+        </div>
+        <span class="text-xl text-primary-white">Desarrollador Full Stack | Futuro Ingeniero en Sistemas</span>
+        <p class="text-primary-white text-lg mt-4">
+          Soy estudiante de ingeniería en sistemas por egresar con experiencia en desarrollo web, y mobile en android. Me apasiona crear soluciones tecnológicas que mejoren y faciliten la vida de las personas.
+        </p>
+      </div>
+
+      <!-- Imagen (derecha) -->
+      <div class="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+        <Image
+          src="/images/daniel.jpg"
+          alt="Daniel Ochoa"
+		  width={300}
+		  height={300}
+          class="rounded-full border-4 border-secondary-yellow object-cover"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>
