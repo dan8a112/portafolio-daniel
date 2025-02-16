@@ -1,4 +1,4 @@
-export interface SocialItem{
+export interface SocialItemProps{
     icon: string;
     url: string;
 }
@@ -7,6 +7,7 @@ export interface ContentBlockProps{
     title: string;
     paragraph: string;
     image: string;
+    imageRight: boolean;
 }
 
 export interface ButtonLinksProps{
@@ -35,6 +36,7 @@ export interface AcademicCardProps{
 export interface ProjectCard{
     image: string;
     title: string;
+    description: string;
     skills: string[];
     href: string;
 }
