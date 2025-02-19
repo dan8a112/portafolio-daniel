@@ -1,3 +1,8 @@
+export interface HeaderItems{
+    text: string;
+    href: string;
+}
+
 export interface SocialItemProps{
     icon: string;
     url: string;
@@ -7,6 +12,7 @@ export interface ContentBlockProps{
     title: string;
     paragraph: string;
     image: string;
+    imageAlt: string;
     imageRight: boolean;
 }
 

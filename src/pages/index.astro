@@ -1,16 +1,15 @@
 ---
-import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { contentBlocks } from "../content/data/db";
+import ContentBlock from "../components/ContentBlock.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Header />
-
-  <section class="py-12">
+  <section class="py-10">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
       <!-- Contenido de texto (izquierda) -->
       <div class="md:w-1/2 space-y-3">
@@ -19,9 +18,16 @@ import { Image } from "astro:assets";
           <span class="text-3xl text-secondary-yellow">soy</span>
           <h2 class="text-4xl font-bold text-secondary-yellow">Daniel Ochoa</h2>
         </div>
-        <span class="text-xl text-primary-white">Desarrollador Full Stack | Futuro Ingeniero en Sistemas</span>
+        <span class="text-xl text-primary-white"
+          >Desarrollador Full Stack | Futuro Ingeniero en Sistemas</span
+        >
         <p class="text-primary-white text-lg mt-4">
-          Soy un estudiante de Ingeniería en Sistemas próximo a egresar, con experiencia en desarrollo web y desarrollo móvil para Android. Mi pasión es crear soluciones tecnológicas innovadoras que no solo resuelvan problemas complejos, sino que también simplifiquen y mejoren la vida de las personas y los negocios.
+          Desarrollador web con <strong>Enfoque en Frontend</strong>, con experiencia en
+          desarrollo web y desarrollo móvil para Android. Mi misión es <strong>crear soluciones tecnológicas innovadoras</strong>
+          que simplifican y mejoran los
+          procesos de negocios y la experiencia de uso de los usuarios finales.
+          Me motiva trabajar en proyectos desafiantes que me permitan seguir
+          creciendo como profesional y aportar valor a través de la tecnología.
         </p>
       </div>
 
@@ -30,13 +36,22 @@ import { Image } from "astro:assets";
         <Image
           src="/images/daniel.jpg"
           alt="Daniel Ochoa"
-		  width={300}
-		  height={300}
+          width={300}
+          height={300}
           class="rounded-full border-4 border-secondary-yellow object-cover"
         />
       </div>
     </div>
   </section>
-  <div class="flex gap-3">
-  </div>
+  {
+    contentBlocks.map((content) => (
+      <ContentBlock
+        title={content.title}
+        paragraph={content.paragraph}
+        image={content.image}
+        imageAlt={content.imageAlt}
+        imageRight={content.imageRight}
+      />
+    ))
+  }
 </Layout>

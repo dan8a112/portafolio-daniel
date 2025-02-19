@@ -1,4 +1,10 @@
-import type {SocialItemProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCard} from '../../interfaces/interface.ts'
+import type {SocialItemProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCard, HeaderItems} from '../../interfaces/interface.ts'
+
+export const headerItems: HeaderItems[] = [
+    {text:"Inicio", href:"/"},
+    {text:"Habilidades", href:"/skills"},
+    {text:"Proyectos", href:"/projects"}
+]
 
 export const socials: SocialItemProps[] = [
     {
@@ -14,14 +20,16 @@ export const socials: SocialItemProps[] = [
 export const contentBlocks: ContentBlockProps[] = [
     {
         title: "Trayectoria profesional",
-        paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como desarrollador web, tanto en el área de frontend (diseño y programación de interfaces de usuario) como en backend (desarrollo de APIs web). Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para trabajar en equipo y adaptarme a diferentes entornos de desarrollo.",
+        paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como <strong>desarrollador web</strong>, tanto en el área de <strong>frontend</strong> (diseño y programación de interfaces de usuario) como en <strong>backend</strong> (desarrollo de APIs web). Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para <strong>trabajar en equipo</strong> y adaptarme a diferentes entornos de desarrollo.",
         image: "/images/programming-ill.png",
+        imageAlt: "Programacion ilustracion",
         imageRight: true
     },
     {
         title: "Ciencia y Libros",
-        paragraph: "Además de mi pasión por la programación, soy un entusiasta de la ciencia y la literatura. Disfruto de un buen café mientras leo libros que van desde fantasía y ciencia ficción hasta temas científicos que exploran los misterios del universo. Para mí, la lectura no solo es una fuente de inspiración, sino también una forma de relajarme y mantener mi mente activa.",
-        image: "/images/programming-ill.png",
+        paragraph: "Además de mi pasión por la programación, soy un entusiasta de la <strong>ciencia y la literatura</strong>. Disfruto de un buen café mientras leo libros que van desde <strong>fantasía y ciencia ficción hasta temas científicos </strong>que exploran los misterios del universo. Para mí, la lectura no solo es una fuente de inspiración, sino también una forma de relajarme y mantener mi mente activa.",
+        image: "/images/books-ill.png",
+        imageAlt: "Ciencia y libros ilustracion",
         imageRight: false
     }
 ]

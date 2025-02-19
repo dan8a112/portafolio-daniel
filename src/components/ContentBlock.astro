@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import type { ContentBlockProps } from "../interfaces/interface";
+const {title, paragraph, image, imageAlt, imageRight} = Astro.props as ContentBlockProps
+
+const splitedTitle = title.split(" "); //Se separan las palabras de los titulos
+---
+
+<section class="py-8">
+    <div class={`container mx-auto px-6 flex flex-col ${imageRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8`}>
+      <!-- Contenido de texto -->
+      <div class="md:w-1/2 space-y-4">
+        <h2 class="text-3xl">
+            {splitedTitle.map((tlt, index)=>
+                <span class={`${index===0 ? "text-primary-white" : "text-secondary-yellow"} mr-1`}>
+                    {tlt}
+                </span>)}
+        </h2>
+        <p class="text-primary-white text-lg" set:html={paragraph}></p>
+      </div>
+  
+      <!-- Imagen -->
+      <div class="md:w-1/2 flex justify-center">
+        <Image
+          src={image}
+          width={300}
+          height={300}
+          alt={imageAlt}
+        />
+      </div>
+    </div>
+  </section>
