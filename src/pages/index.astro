@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import { contentBlocks } from "../content/data/db";
+import { contentBlocks, socials } from "../content/data/db";
 import ContentBlock from "../components/ContentBlock.astro";
+import SocialLink from "../components/SocialLink.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -29,6 +30,9 @@ import ContentBlock from "../components/ContentBlock.astro";
           Me motiva trabajar en proyectos desafiantes que me permitan seguir
           creciendo como profesional y aportar valor a través de la tecnología.
         </p>
+        <div class="flex flex-row items-center gap-4">
+          {socials.map(social=><SocialLink url={social.url} icon={social.icon}></SocialLink>)}
+        </div>
       </div>
 
       <!-- Imagen (derecha) -->

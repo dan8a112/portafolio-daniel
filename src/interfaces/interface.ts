@@ -3,9 +3,12 @@ export interface HeaderItems{
     href: string;
 }
 
-export interface SocialItemProps{
+export interface SocialLinkProps{
     icon: string;
     url: string;
+    height: string;
+    width: string;
+    altText: string;
 }
 
 export interface ContentBlockProps{

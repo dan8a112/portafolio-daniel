@@ -1,4 +1,4 @@
-import type {SocialItemProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCard, HeaderItems} from '../../interfaces/interface.ts'
+import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCard, HeaderItems} from '../../interfaces/interface.ts'
 
 export const headerItems: HeaderItems[] = [
     {text:"Inicio", href:"/"},
@@ -6,14 +6,20 @@ export const headerItems: HeaderItems[] = [
     {text:"Proyectos", href:"/projects"}
 ]
 
-export const socials: SocialItemProps[] = [
+export const socials: SocialLinkProps[] = [
     {
         icon: "/images/github-icon.svg",
-        url: "https://github.com/dan8a112"
+        url: "https://github.com/dan8a112",
+        height: "45px",
+        width: "45px",
+        altText: "Icono de github"
     },
     {
         icon: "/images/linkedin-icon.svg",
-        url: "https://www.linkedin.com/in/daniel-ochoa-is/"
+        url: "https://www.linkedin.com/in/daniel-ochoa-is/",
+        height: "45px",
+        width: "45px",
+        altText: "Icono de linkedin"
     }
 ]
 
