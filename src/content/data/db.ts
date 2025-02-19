@@ -54,65 +54,95 @@ export const buttons: ButtonLinksProps[] = [
 export const skills: Skills = {
     Frontend: [
         {
-            icon: "/images/javascript-icon.png",
+            icon: "/images/javascript-icon.svg",
             text: "Javascript",
             percentage: 0.5,
             endText: "50%"
         },
         {
-            icon: "/images/react-icon.png",
+            icon: "/images/react-icon.svg",
             text: "React",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/nextjs-icon.svg",
+            text: "Next.js",
             percentage: 0.3,
             endText: "30%"
         },
         {
-            icon: "/images/nextjs-icon.png",
-            text: "Next.js",
-            percentage: 0.25,
-            endText: "25%"
-        },
-        {
-            icon: "/images/astrojs-icon.png",
+            icon: "/images/astrojs-icon.svg",
             text: "Astro.js",
             percentage: 0.2,
             endText: "20%" 
         },
         {
-            icon: "/images/bootstrap-icon.png",
+            icon: "/images/bootstrap-icon.svg",
             text: "Bootstrap",
             percentage: 0.4,
             endText: "40%"
-        }
+        },
+        {
+            icon: "/images/laravel-icon.svg",
+            text: "Laravel",
+            percentage: 0.2,
+            endText: "20%"
+        },
+        {
+            icon: "/images/css-icon.svg",
+            text: "CSS",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/mui-icon.svg",
+            text: "Material UI",
+            percentage: 0.25,
+            endText: "25%"
+        },
+        {
+            icon: "/images/tailwind-icon.svg",
+            text: "Tailwind",
+            percentage: 0.2,
+            endText: "20%"
+        },
     ],
     Backend: [
         {
-            icon: "/images/springboot-icon.png",
+            icon: "/images/springboot-icon.svg",
             text: "SpringBoot",
-            percentage: 0.3,
-            endText: "30%"
+            percentage: 0.4,
+            endText: "40%"
         },
         {
-            icon: "/images/phg-icon.png",
+            icon: "/images/php-icon.svg",
             text: "PHP",
             percentage: 0.2,
             endText: "20%"
         },
         {
-            icon: "/images/laravel-icon.png",
-            text: "Laravel",
-            percentage: 0.2,
-            endText: "20%"
+            icon: "/images/java-icon.svg",
+            text: "Java",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/kotlin-icon.svg",
+            text: "Kotlin",
+            percentage: 0.3,
+            endText: "30%"
         }
     ],
     "Data Bases": [
         {
-            icon: "/images/mysql-icon.png",
+            icon: "/images/mysql-icon.svg",
             text: "MySQL",
             percentage: 0.4,
             endText: "40%"
         },
         {
-            icon: "/images/oracle-icon.png",
+            icon: "/images/oracle-icon.svg",
             text: "Oracle",
             percentage: 0.3,
             endText: "30%"
@@ -120,16 +150,28 @@ export const skills: Skills = {
     ],
     "Diseño": [
         {
-            icon: "/images/figma-icon.png",
+            icon: "/images/figma-icon.svg",
             text: "Figma",
             percentage: 0.4,
             endText: "40%"
         },
         {
-            icon: "/images/illustrator-icon.png",
+            icon: "/images/illustrator-icon.svg",
             text: "Adobe Illustrator",
             percentage: 0.25, 
             endText: "25%"
+        }
+    ],
+    "Idiomas": [
+        {
+            text: "Español",
+            percentage: 1, 
+            endText: "Nativo"
+        },
+        {
+            text: "Inglés",
+            percentage: 0.4, 
+            endText: "B1"
         }
     ]
 }

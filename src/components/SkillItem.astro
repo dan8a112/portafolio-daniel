@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import type { SkillItem } from "../interfaces/interface";
+const { icon, text, percentage, endText } = Astro.props as SkillItem;
+---
+
+<div class="bg-tertiary-lightblue p-4 rounded-lg shadow-md">
+  <!-- Contenido superior: Ícono, texto y porcentaje -->
+  <div class="flex justify-between items-center mb-4">
+    <div class="flex items-center space-x-4">
+      <!-- Ícono -->
+      {
+        icon && (
+          <Image src={icon} alt={"Icono de skill"} width={40} height={40} />
+        )
+      }
+      <!-- Texto -->
+      <span class="text-lg text-primary-white">{text}</span>
+    </div>
+    <!-- Porcentaje -->
+    <span class="text-lg text-primary-white">{endText}</span>
+  </div>
+
+  <!-- Barra de progreso -->
+  <div class="w-full bg-gray-200 rounded-full h-2">
+    <div
+      class="bg-secondary-yellow h-2 rounded-full transition-all duration-1000"
+      style={`width: ${percentage * 100}%;`}
+    >
+    </div>
+  </div>
+</div>

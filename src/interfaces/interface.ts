@@ -24,7 +24,7 @@ export interface ButtonLinksProps{
     href: string; 
 }
 
-interface SkillItem{
+export interface SkillItem{
     icon?: string;
     text: string;
     percentage: number;

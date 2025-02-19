@@ -1,14 +1,13 @@
 ---
+import SkillCategory from "../components/SkillCategory.astro";
 import Layout from "../layouts/Layout.astro";
-
-
+import { skills } from "../content/data/db";
 ---
 
 <Layout>
     <section class="py-10">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <h2 class="text-4xl font-bold text-primary-white">Habilidades</h2>
-                
+            <SkillCategory skills={skills} title="Habilidades"/>
         </div>
     </section>
 </Layout>

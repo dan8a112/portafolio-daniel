@@ -1,0 +1,42 @@
+---
+import type { Skills } from "../interfaces/interface";
+import SkillItem from "./SkillItem.astro";
+
+interface Props {
+  title: string;
+  skills: Skills;
+}
+
+const { title, skills } = Astro.props as Props;
+---
+
+<section>
+    <div class="container mx-auto px-6 flex flex-col">
+      <!-- Título principal -->
+      <h2 class="text-3xl font-bold text-primary-white mb-6">{title}</h2>
+  
+      <!-- Lista de categorías (en fila) -->
+      <div class="flex flex-col md:flex-row flex-wrap gap-8">
+        {
+          Object.entries(skills).map(([cat, skl]) => (
+            <div class="flex-1 min-w-[350px] max-w-[350px]">
+              <!-- Título de la categoría -->
+              <p class="text-2xl text-primary-white mb-4">{cat}</p>
+  
+              <!-- Lista de SkillItem (en columna) -->
+              <div class="flex flex-col gap-4">
+                {
+                  skl
+                    .slice()
+                    .sort((a, b) => b.percentage- a.percentage)
+                    .map((skill) => (
+                      <SkillItem {...skill} />
+                    ))
+                }
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
