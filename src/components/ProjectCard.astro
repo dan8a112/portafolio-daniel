@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import type { ProjectCardProps } from "../interfaces/interface";
+const {image, title, description, skills, href} = Astro.props as ProjectCardProps;
+---
+
+<div class="bg-background-bluedark p-6 shadow-md rounded-xl">
+    <div class="flex flex-col md:flex-row items-center gap-5">
+        <!--Imagen -->
+        <Image 
+        src={image}
+        alt={"Imagen de proyecto"}
+        width={200}
+        height={200}
+        class="rounded-lg shadow-lg"/>
+
+        <div class="flex flex-col">
+            <h2 class="text-2xl text-secondary-yellow mb-2">{title}</h2>
+            <p class="text-md text-primary-white mb-3">{description}</p>
+            <div class="flex items-center gap-3">
+                {skills.map(skill=> (<div class="px-3 py-1 rounded-2xl border border-primary-white text-primary-white">{skill}</div>))}
+            </div>
+            <div class="flex justify-end">
+                <a href={href}>
+                    <div class="px-4 py-2 border-none bg-secondary-yellow rounded-xl text-background-bluedark">Ver más</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

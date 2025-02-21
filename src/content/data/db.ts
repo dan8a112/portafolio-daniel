@@ -1,4 +1,4 @@
-import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCard, HeaderItems} from '../../interfaces/interface.ts'
+import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCardProps, HeaderItems} from '../../interfaces/interface.ts'
 
 export const headerItems: HeaderItems[] = [
     {text:"Inicio", href:"/"},
@@ -196,23 +196,23 @@ export const education: AcademicCardProps[] = [
         image: "/images/unah-logo.png",
         title: "Universidad Nacional Autónoma de Honduras",
         subtitle: "Ingeniería en Sistemas",
-        footTitle: "2020 - Actualidad"
+        footText: "2020 - Actualidad"
     },
     {
         image: "/images/alura-logo.png",
         title: "Oracle Next Education & Alura Latam",
         subtitle: "Formación FrontEnd",
-        footTitle: "30 Mar. 2023 - 22 Sep. 2023"
+        footText: "30 Mar. 2023 - 22 Sep. 2023"
     },
     {
         image: "/images/cisco-logo.png",
         title: "Cisco Networking Academy",
         subtitle: "CCNA1 Network Funtamentals",
-        footTitle: "10 Jun. 2024 - 20 Dic. 2024"
+        footText: "10 Jun. 2024 - 20 Dic. 2024"
     },
 ]
 
-export const projects: ProjectCard[] = [
+export const projects: ProjectCardProps[] = [
     {
         image: "/images/usales.jpg",
         title: "Usales",

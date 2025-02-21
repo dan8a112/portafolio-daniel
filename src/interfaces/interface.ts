@@ -39,10 +39,10 @@ export interface AcademicCardProps{
     image: string;
     title: string;
     subtitle: string;
-    footTitle: string;
+    footText: string;
 }
 
-export interface ProjectCard{
+export interface ProjectCardProps{
     image: string;
     title: string;
     description: string;
