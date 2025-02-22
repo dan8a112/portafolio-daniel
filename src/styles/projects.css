@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-white: oklch(100% 0 0);
+    --color-secondary-yellow: oklch(81.55% 0.11 58.69);
+}
+
+article h1 { @apply text-3xl font-bold text-secondary-yellow mb-4 mt-8; }
+article h2 { @apply text-2xl font-semibold text-secondary-yellow mb-4 mt-8; }
+article h3 { @apply text-xl font-semibold text-secondary-yellow mb-3 mt-6; }
+article p { @apply text-lg mb-4 text-primary-white; }
+article ul { @apply list-disc list-inside mb-4; }
+article ol { @apply list-decimal list-inside mb-4; }
+article li { @apply mb-2; }
+article strong { @apply text-blue-100; }
+article a { @apply text-blue-100 hover:text-orange-300; }
