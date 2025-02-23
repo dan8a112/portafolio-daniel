@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import { contentBlocks, socials } from "../content/data/db";
+import { contentBlocks, headerItems, socials } from "../content/data/db";
 import ContentBlock from "../components/ContentBlock.astro";
 import SocialLink from "../components/SocialLink.astro";
+import LinkCard from "../components/LinkCard.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -22,16 +23,21 @@ import SocialLink from "../components/SocialLink.astro";
         <span class="text-xl text-primary-white"
           >Desarrollador Full Stack | Futuro Ingeniero en Sistemas</span
         >
-        <p class="text-primary-white text-lg mt-4">
-          Desarrollador web con <strong>Enfoque en Frontend</strong>, con experiencia en
-          desarrollo web y desarrollo móvil para Android. Mi misión es <strong>crear soluciones tecnológicas innovadoras</strong>
-          que simplifican y mejoran los
-          procesos de negocios y la experiencia de uso de los usuarios finales.
-          Me motiva trabajar en proyectos desafiantes que me permitan seguir
-          creciendo como profesional y aportar valor a través de la tecnología.
+        <p class="text-primary-white text-lg mt-4 mb-5">
+          Desarrollador web con <strong>Enfoque en Frontend</strong>, con
+          experiencia en desarrollo web y desarrollo móvil para Android. Mi
+          misión es <strong>crear soluciones tecnológicas innovadoras</strong>
+          que simplifican y mejoran los procesos de negocios y la experiencia de
+          uso de los usuarios finales. Me motiva trabajar en proyectos desafiantes
+          que me permitan seguir creciendo como profesional y aportar valor a través
+          de la tecnología.
         </p>
         <div class="flex flex-row items-center gap-4">
-          {socials.map(social=><SocialLink url={social.url} icon={social.icon}></SocialLink>)}
+          {
+            socials.map((social) => (
+              <SocialLink url={social.url} icon={social.icon} />
+            ))
+          }
         </div>
       </div>
 
@@ -58,4 +64,17 @@ import SocialLink from "../components/SocialLink.astro";
       />
     ))
   }
+
+  <section class="container mx-auto px-6 pb-6 pt-5">
+    <h1 class="text-3xl mb-6 text-primary-white">
+      Tambien puedes ver
+    </h1>
+    <div class="flex flex-col md:flex-row gap-6">
+      {
+        headerItems
+          .slice(1)
+          .map((item) => (<LinkCard text={item.text} href={item.href} />))
+      }
+    </div>
+  </section>
 </Layout>

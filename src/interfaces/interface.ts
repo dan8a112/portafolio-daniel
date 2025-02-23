@@ -1,4 +1,4 @@
-export interface HeaderItems{
+export interface LinkItems{
     text: string;
     href: string;
 }

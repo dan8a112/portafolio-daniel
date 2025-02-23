@@ -1,6 +1,6 @@
-import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCardProps, HeaderItems} from '../../interfaces/interface.ts'
+import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, AcademicCardProps, ProjectCardProps, LinkItems} from '../../interfaces/interface.ts'
 
-export const headerItems: HeaderItems[] = [
+export const headerItems: LinkItems[] = [
     {text:"Inicio", href:"/"},
     {text:"Habilidades", href:"/skills"},
     {text:"Proyectos", href:"/projects"}
@@ -29,14 +29,14 @@ export const contentBlocks: ContentBlockProps[] = [
         paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como <strong>desarrollador web</strong>, tanto en el área de <strong>frontend</strong> (diseño y programación de interfaces de usuario) como en <strong>backend</strong> (desarrollo de APIs web). Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para <strong>trabajar en equipo</strong> y adaptarme a diferentes entornos de desarrollo.",
         image: "/images/programming-ill.png",
         imageAlt: "Programacion ilustracion",
-        imageRight: true
+        imageRight: false
     },
     {
         title: "Ciencia y Libros",
         paragraph: "Además de mi pasión por la programación, soy un entusiasta de la <strong>ciencia y la literatura</strong>. Disfruto de un buen café mientras leo libros que van desde <strong>fantasía y ciencia ficción hasta temas científicos </strong>que exploran los misterios del universo. Para mí, la lectura no solo es una fuente de inspiración, sino también una forma de relajarme y mantener mi mente activa.",
         image: "/images/books-ill.png",
         imageAlt: "Ciencia y libros ilustracion",
-        imageRight: false
+        imageRight: true
     }
 ]
 
@@ -193,7 +193,7 @@ export const languages: Skills = {
 
 export const education: AcademicCardProps[] = [
     {
-        image: "/images/unah-logo.png",
+        image: "/images/unah-logo.jpg",
         title: "Universidad Nacional Autónoma de Honduras",
         subtitle: "Ingeniería en Sistemas",
         footText: "2020 - Actualidad"

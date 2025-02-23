@@ -1,6 +1,6 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
-import { projects } from "../content/data/db";
+import { projects} from "../content/data/db";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,18 +8,18 @@ import Layout from "../layouts/Layout.astro";
   <section class="py-10">
     <!-- Título principal -->
     <div class="container mx-auto px-8 flex flex-col gap-8 w-[95%]">
-        <h2 class="text-3xl font-bold text-primary-white">Proyectos</h2>
-        {
-            projects.map((project) => (
-              <ProjectCard
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                href={project.href}
-                skills={project.skills}
-              />
-            ))
-          }
+      <h2 class="text-3xl font-bold text-primary-white">Proyectos</h2>
+      {
+        projects.map((project) => (
+          <ProjectCard
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            href={project.href}
+            skills={project.skills}
+          />
+        ))
+      }
     </div>
   </section>
 </Layout>
