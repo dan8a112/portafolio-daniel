@@ -29,7 +29,7 @@ const {Content, headings} = await entry.render();
         <h1 class="text-4xl font-bold text-secondary-yellow mb-4">{entry.data.title}</h1>
         <p class="text-xl text-primary-white mb-8">{entry.data.description}</p>
     
-        <nav class="toc mb-8 bg-background-bluedark p-5 rounded-lg">
+        <nav class="toc mb-8 bg-background-bluedark p-5 rounded-lg w-[50%]">
           <h2 class="text-2xl font-semibold mb-4 text-secondary-yellow">Tabla de contenido</h2>
           <ul class="space-y-2">
             {headings.map((heading: any) => (
