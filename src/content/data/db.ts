@@ -26,7 +26,7 @@ export const socials: SocialLinkProps[] = [
 export const contentBlocks: ContentBlockProps[] = [
     {
         title: "Trayectoria profesional",
-        paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como <strong>desarrollador web</strong>, tanto en el área de <strong>frontend</strong> (diseño y programación de interfaces de usuario) como en <strong>backend</strong> (desarrollo de APIs web). Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para <strong>trabajar en equipo</strong> y adaptarme a diferentes entornos de desarrollo.",
+        paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como <strong>desarrollador web</strong>, tanto en el área de <strong>frontend</strong> (diseño y programación de interfaces de usuario) como en <strong>backend</strong>. Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para <strong>trabajar en equipo</strong> y adaptarme a diferentes entornos de desarrollo.",
         image: "/images/programming-ill.png",
         imageAlt: "Programacion ilustracion",
         imageRight: false
@@ -202,13 +202,15 @@ export const education: AcademicCardProps[] = [
         image: "/images/alura-logo.png",
         title: "Oracle Next Education & Alura Latam",
         subtitle: "Formación FrontEnd",
-        footText: "30 Mar. 2023 - 22 Sep. 2023"
+        footText: "30 Mar. 2023 - 22 Sep. 2023",
+        href: "https://app.aluracursos.com/program/certificate/d6263e57-185f-46d9-ab4b-f2fce591c67e"
     },
     {
         image: "/images/cisco-logo.png",
         title: "Cisco Networking Academy",
         subtitle: "CCNA1 Network Funtamentals",
-        footText: "10 Jun. 2024 - 20 Dic. 2024"
+        footText: "10 Jun. 2024 - 20 Dic. 2024",
+        href: "https://www.credly.com/badges/f866d20a-1a1b-4114-a939-8dfc7715d1b4/linked_in_profile"
     },
 ]
 

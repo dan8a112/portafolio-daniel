@@ -40,6 +40,7 @@ export interface AcademicCardProps{
     title: string;
     subtitle: string;
     footText: string;
+    href?: string;
 }
 
 export interface ProjectCardProps{

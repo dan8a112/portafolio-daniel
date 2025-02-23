@@ -15,15 +15,17 @@ import LinkCard from "../components/LinkCard.astro";
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
       <!-- Contenido de texto (izquierda) -->
       <div class="md:w-1/2 space-y-3">
-        <div>
+        <div class="animate-fadeInLeft">
           <span class="text-3xl text-primary-white">Hola,</span>
           <span class="text-3xl text-secondary-yellow">soy</span>
           <h2 class="text-4xl font-bold text-secondary-yellow">Daniel Ochoa</h2>
         </div>
-        <span class="text-xl text-primary-white"
-          >Desarrollador Full Stack | Futuro Ingeniero en Sistemas</span
-        >
-        <p class="text-primary-white text-lg mt-4 mb-5">
+        <div class="animate-fadeInLeft">
+          <span class="text-xl text-primary-white">
+            Desarrollador Full Stack | Futuro Ingeniero en Sistemas
+          </span>
+        </div>
+        <p class="text-primary-white text-lg mt-4 mb-5 animate-fadeInLeft">
           Desarrollador web con <strong>Enfoque en Frontend</strong>, con
           experiencia en desarrollo web y desarrollo móvil para Android. Mi
           misión es <strong>crear soluciones tecnológicas innovadoras</strong>
@@ -32,7 +34,7 @@ import LinkCard from "../components/LinkCard.astro";
           que me permitan seguir creciendo como profesional y aportar valor a través
           de la tecnología.
         </p>
-        <div class="flex flex-row items-center gap-4">
+        <div class="flex flex-row items-center gap-4 animate-fadeInLeft">
           {
             socials.map((social) => (
               <SocialLink url={social.url} icon={social.icon} />
@@ -48,7 +50,7 @@ import LinkCard from "../components/LinkCard.astro";
           alt="Daniel Ochoa"
           width={300}
           height={300}
-          class="rounded-full border-4 border-secondary-yellow object-cover"
+          class="rounded-full border-4 border-secondary-yellow object-cover animate-fadeInRight"
         />
       </div>
     </div>
@@ -61,6 +63,7 @@ import LinkCard from "../components/LinkCard.astro";
         image={content.image}
         imageAlt={content.imageAlt}
         imageRight={content.imageRight}
+        class=""
       />
     ))
   }

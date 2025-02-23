@@ -7,3 +7,60 @@
     --color-background-blue: oklch(32.7% 0.0536 275.81);
     --color-background-bluedark: oklch(28.95% 0.0461 276.19);
 }
+
+/* Animación para la imagen */
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animación para los títulos */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Aplicar las animaciones */
+  .animate-fadeInRight {
+    animation: fadeInRight 1s ease-out;
+  }
+  
+  .animate-fadeInLeft {
+    animation: fadeInLeft 1s ease-out;
+  }
+
+  /* Animación de abajo hacia arriba */
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px); /* Comienza 50px más abajo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Termina en su posición original */
+    }
+  }
+  
+  /* Clase para aplicar la animación */
+  .animate-slideUp {
+    animation: slideUp 1s ease-out;
+    animation-fill-mode: backwards; /* Mantiene el estado inicial durante el retardo */
+  }
+
+  /* Clase para aplicar la animación */
+  .animate-slideUp-delayed {
+    animation: slideUp 1s ease-out 0.4s;
+    animation-fill-mode: backwards; /* Mantiene el estado inicial durante el retardo */
+  }

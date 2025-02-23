@@ -16,7 +16,7 @@ const { title, skills } = Astro.props as Props;
       <h2 class="text-3xl font-bold text-primary-white mb-6">{title}</h2>
   
       <!-- Lista de categorías (en fila) -->
-      <div class="flex flex-col md:flex-row flex-wrap gap-8">
+      <div class="flex flex-col md:flex-row flex-wrap gap-8 animate-slideUp">
         {
           Object.entries(skills).map(([cat, skl]) => (
             <div class="flex-1 min-w-[350px] max-w-[350px]">
