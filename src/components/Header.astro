@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { headerItems } from "../content/data/db";
-const currentPath = Astro.url.pathname; //Ruta actual
+const currentPath = Astro.url.pathname.replace(/\/$/, ""); //Ruta actual sin pleca al final
 ---
 
 <header class="bg-background-bluedark shadow-md">
@@ -19,7 +19,7 @@ const currentPath = Astro.url.pathname; //Ruta actual
           <a
             href={item.href}
             class={`hover:border-b-1 hover:border-secondary-yellow transition-colors 
-        ${currentPath === item.href ? "border-b-1 border-secondary-yellow" : ""}`}
+        ${currentPath === item.href.replace(/\/$/, "") ? "border-b-1 border-secondary-yellow" : ""}`}
           >
             {item.text}
           </a>

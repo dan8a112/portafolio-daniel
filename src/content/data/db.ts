@@ -262,7 +262,7 @@ export const projects: ProjectCardProps[] = [
         title: "Registro UNAH (Réplica)",
         description: "Este proyecto es una réplica de un sistema de gestión universitaria, inspirado en los procesos de la Universidad Nacional Autónoma de Honduras (UNAH). La aplicación web maneja procesos clave como la admisión y matrícula de estudiantes, además de incluir portales para personal administrativo, como administradores de admisiones, maestros, jefes de departamento y coordinadores.",
         skills: ["Javascript", "HTML", "CSS", "PHP"],
-        href: "/projects/registro-unah-replica"
+        href: "/projects/registrounah-replica"
     },
 ]
 
