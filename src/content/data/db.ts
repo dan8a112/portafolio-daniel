@@ -223,6 +223,13 @@ export const projects: ProjectCardProps[] = [
         href: "/projects/usales"
     },
     {
+        image: "/images/pokeapi.jpg",
+        title: "Generador de Reportes V2",
+        description: "El Generador de Reportes V2 es una versión avanzada de una aplicación web previa, diseñada para generar archivos CSV a partir de datos de la PokeAPI. Esta nueva iteración incorpora mejoras clave como la eliminación integral de reportes, enriquecimiento de datos con estadísticas detalladas de los Pokémon y la posibilidad de aplicar muestreo aleatorio. Todo esto se despliega en Azure, aprovechando una arquitectura moderna y procesos asíncronos para una experiencia de uso eficiente y sin interrupciones.",
+        skills: ["Next.js", "Tailwind", "Python", "Sql Server", "Docker", "Azure"],
+        href: "/projects/pokeapi"
+    },
+    {
         image: "/images/uwork.jpg",
         title: "Uwork",
         description: "Uwork es una aplicación web diseñada para facilitar la búsqueda de empleo, conectando a las personas con oportunidades laborales que se ajusten a sus habilidades, competencias y necesidades.",

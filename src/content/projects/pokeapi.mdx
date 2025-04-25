@@ -1,0 +1,57 @@
+---
+title: "Generador de Reportes V2 (PokeAPI Mejorada)"
+description: "Es una herramienta de reportes que combina datos de la PokeAPI con estadísticas enriquecidas y opciones de muestreo inteligente."
+---
+
+# Generador de Reportes V2 - Plataforma de Análisis Pokémon Mejorada
+
+El Generador de Reportes V2 es una versión avanzada de una aplicación web previa, diseñada para generar archivos CSV a partir de datos de la PokeAPI. Esta nueva iteración incorpora mejoras clave como la eliminación integral de reportes, enriquecimiento de datos con estadísticas detalladas de los Pokémon y la posibilidad de aplicar muestreo aleatorio. Todo esto se despliega en Azure, aprovechando una arquitectura moderna y procesos asíncronos para una experiencia de uso eficiente y sin interrupciones.
+
+## 🙋🏻‍♂️ Mi participación en el desarrollo
+
+Como desarrollador full-stack, estuve a cargo del diseño e implementación de nuevas funcionalidades, así como de optimizar la solución existente. Algunas de mis tareas fueron:
+
+### Nuevas funcionalidades implementadas
+
+- **Borrado completo de reportes**: Desarrollé un mecanismo seguro que elimina tanto los archivos del almacenamiento en la nube como sus registros en base de datos.
+- **Datos enriquecidos**: Integré información adicional como estadísticas base y habilidades de cada Pokémon, consultando endpoints adicionales de la PokeAPI.
+- **Selección aleatoria**: Implementé una opción que permite limitar la cantidad de datos en los reportes mediante muestreo aleatorio configurable.
+
+### Mejoras a la arquitectura existente
+
+- **Frontend (Next.js)**: Renové la interfaz agregando elementos como formularios extendidos y ventanas de confirmación para acciones críticas.
+- **Backend (FastAPI)**: Añadí nuevos endpoints y lógica para soportar las funcionalidades enriquecidas, sin romper la compatibilidad con lo anterior.
+- **Procesamiento asíncrono (Azure Functions)**: Optimizé el worker en Python para adaptarlo al nuevo flujo de enriquecimiento y muestreo.
+
+## ✨ Valor del proyecto
+
+Esta evolución del sistema no solo mantuvo su funcionamiento continuo, sino que también lo potenció con nuevas capacidades:
+
+- **Análisis más completo**: Los reportes ahora contienen información mucho más rica sobre cada Pokémon.
+- **Mayor versatilidad**: El muestreo aleatorio permite trabajar cómodamente con grandes volúmenes de datos.
+- **Uso optimizado de recursos**: La eliminación segura de reportes ayuda a mantener el sistema ordenado y eficiente.
+
+## 🎇 Impacto técnico
+
+Las actualizaciones aportaron beneficios clave al sistema:
+
+- **Escalable**: Gracias a su arquitectura basada en Azure, el sistema puede crecer fácilmente.
+- **Fácil de mantener**: La base de código quedó organizada y documentada, preparada para futuras mejoras.
+- **Mejor experiencia de usuario**: Las nuevas herramientas ofrecen más opciones y control para los usuarios.
+
+## 🤖 Tecnologías utilizadas
+
+- **Frontend**: Next.js (React)
+- **Backend**: FastAPI (Python)
+- **Procesamiento asíncrono**: Azure Functions (Python)
+- **Almacenamiento**: Azure SQL Database, Azure Blob Storage, Azure Queue Storage
+- **Infraestructura como código**: Terraform
+- **API externa**: PokeAPI
+
+## 🤖 Repositorios
+
+- **Frontend**: [Enlace al repositorio](https://github.com/angelcastillo25/pokeui)
+- **API**: [Enlace al repositorio](https://github.com/dan8a112/pokequeue.api)
+- **Azure Functions**: [Enlace al repositorio](https://github.com/dan8a112/pokequeue.function)
+- **Base de Datos**: [Enlace al repositorio](https://github.com/dan8a112/pokequeue.sql)
+- **Infraestructura**: [Enlace al repositorio](https://github.com/dan8a112/pokequeue.terraform)
