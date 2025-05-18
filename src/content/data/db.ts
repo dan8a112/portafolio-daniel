@@ -116,10 +116,10 @@ export const skills: Skills = {
             endText: "40%"
         },
         {
-            icon: "/images/php-icon.svg",
-            text: "PHP",
-            percentage: 0.2,
-            endText: "20%"
+            icon: "/images/python-icon.svg",
+            text: "Python",
+            percentage: 0.4,
+            endText: "40%"
         },
         {
             icon: "/images/java-icon.svg",
@@ -132,7 +132,13 @@ export const skills: Skills = {
             text: "Kotlin",
             percentage: 0.3,
             endText: "30%"
-        }
+        },
+        {
+            icon: "/images/php-icon.svg",
+            text: "PHP",
+            percentage: 0.2,
+            endText: "20%"
+        },
     ],
     "Data Bases": [
         {
@@ -206,7 +212,14 @@ export const education: AcademicCardProps[] = [
         href: "https://app.aluracursos.com/program/certificate/d6263e57-185f-46d9-ab4b-f2fce591c67e"
     },
     {
-        image: "/images/cisco-logo.png",
+        image: "/images/pythoncisco-logo.png",
+        title: "Cisco Networking Academy",
+        subtitle: "Python Essentials 1",
+        footText: "1 May. 2023 - 19 May. 2023",
+        href: "https://www.credly.com/badges/706a797a-94a8-42e5-8fa0-c4dc170ec541/linked_in_profile"
+    },
+    {
+        image: "/images/ccna1cisco-logo.png",
         title: "Cisco Networking Academy",
         subtitle: "CCNA1 Network Funtamentals",
         footText: "10 Jun. 2024 - 20 Dic. 2024",
