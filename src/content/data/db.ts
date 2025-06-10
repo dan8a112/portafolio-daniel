@@ -56,20 +56,26 @@ export const skills: Skills = {
         {
             icon: "/images/javascript-icon.svg",
             text: "Javascript",
-            percentage: 0.5,
-            endText: "50%"
+            percentage: 0.6,
+            endText: "60%"
         },
         {
             icon: "/images/react-icon.svg",
             text: "React",
-            percentage: 0.4,
-            endText: "40%"
+            percentage: 0.5,
+            endText: "50%"
         },
         {
             icon: "/images/nextjs-icon.svg",
             text: "Next.js",
             percentage: 0.3,
             endText: "30%"
+        },
+        {
+            icon: "/images/angular.svg",
+            text: "Angular",
+            percentage: 0.3,
+            endText: "30%" 
         },
         {
             icon: "/images/astrojs-icon.svg",
@@ -118,12 +124,18 @@ export const skills: Skills = {
         {
             icon: "/images/python-icon.svg",
             text: "Python",
-            percentage: 0.4,
-            endText: "40%"
+            percentage: 0.3,
+            endText: "30%"
         },
         {
             icon: "/images/java-icon.svg",
             text: "Java",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/csharp-icon.svg",
+            text: "C#",
             percentage: 0.4,
             endText: "40%"
         },
@@ -146,6 +158,12 @@ export const skills: Skills = {
             text: "MySQL",
             percentage: 0.4,
             endText: "40%"
+        },
+        {
+            icon: "/images/sqlserver.svg",
+            text: "Microsoft SQL Server",
+            percentage: 0.3,
+            endText: "30%"
         },
         {
             icon: "/images/oracle-icon.svg",
@@ -228,6 +246,13 @@ export const education: AcademicCardProps[] = [
 ]
 
 export const projects: ProjectCardProps[] = [
+    {
+        image: "/images/umandaditos.jpg",
+        title: "Umandaditos",
+        description: "U-Mandaditos es una plataforma web desarrollada para facilitar la colaboración entre personas dentro de espacios compartidos como universidades, barrios, centros comerciales o instituciones. Permite que los usuarios soliciten ayuda para realizar encargos (mandaditos) a cambio de una recompensa, fomentando una economía colaborativa basada en la cercanía y confianza comunitaria.",
+        skills: ["Next.js", "C# .NET", "CSS", "Styled-Components", "Microsoft SQL Server", "Docker", "Github Actions"],
+        href: "/projects/umandaditos"
+    },
     {
         image: "/images/usales.jpg",
         title: "Usales",
