@@ -3,6 +3,7 @@ import type {SocialLinkProps, ContentBlockProps, ButtonLinksProps, Skills, Acade
 export const headerItems: LinkItems[] = [
     {text:"Inicio", href:"/"},
     {text:"Habilidades", href:"/skills"},
+    {text:"Formación", href:"/education"},
     {text:"Proyectos", href:"/projects"}
 ]
 
@@ -26,7 +27,7 @@ export const socials: SocialLinkProps[] = [
 export const contentBlocks: ContentBlockProps[] = [
     {
         title: "Trayectoria profesional",
-        paragraph: "A lo largo de mi formación, he tenido la oportunidad de participar en diversos proyectos como <strong>desarrollador web</strong>, tanto en el área de <strong>frontend</strong> (diseño y programación de interfaces de usuario) como en <strong>backend</strong>. Estas experiencias me han permitido fortalecer mis habilidades técnicas, así como mi capacidad para <strong>trabajar en equipo</strong> y adaptarme a diferentes entornos de desarrollo.",
+        paragraph: "He trabajado tanto en <strong>desarrollo web</strong>, abarcando frontend y backend, como en proyectos de <strong>analítica e ingeniería de datos</strong>, utilizando tecnologías como SQL, Python, Databricks y Tableau. Estas experiencias me han permitido ampliar mi perfil técnico, comprender distintas etapas del ciclo de desarrollo y procesamiento de datos, y fortalecer habilidades como el <strong>trabajo en equipo y la resolución de problemas</strong>.",
         image: "/images/programming-ill.png",
         imageAlt: "Programacion ilustracion",
         imageRight: false
@@ -52,12 +53,102 @@ export const buttons: ButtonLinksProps[] = [
 ]
 
 export const skills: Skills = {
-    Frontend: [
+    "Datos y BI": [
         {
-            icon: "/images/javascript-icon.svg",
-            text: "Javascript",
+            text: "Tableau",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            text: "Databricks",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            text: "PySpark",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            text: "Medallion Architecture",
+            percentage: 0.3,
+            endText: "30%"
+        },
+        {
+            text: "Microsoft Purview",
+            percentage: 0.3,
+            endText: "30%"
+        },
+        {
+            text: "SQL",
             percentage: 0.5,
             endText: "50%"
+        },
+        {
+            text: "SQL Server",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/mysql-icon.svg",
+            text: "MySQL",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/oracle-icon.svg",
+            text: "Oracle",
+            percentage: 0.3,
+            endText: "30%"
+        }
+    ],
+    "Lenguajes de Programación": [
+        {
+            text: "Python",
+            percentage: 0.5,
+            endText: "50%"
+        },
+        {
+            icon: "/images/javascript-icon.svg",
+            text: "JavaScript",
+            percentage: 0.5,
+            endText: "50%"
+        },
+        {
+            icon: "/images/java-icon.svg",
+            text: "Java",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            text: "C#",
+            percentage: 0.3,
+            endText: "30%"
+        },
+        {
+            icon: "/images/kotlin-icon.svg",
+            text: "Kotlin",
+            percentage: 0.3,
+            endText: "30%"
+        },
+        {
+            icon: "/images/php-icon.svg",
+            text: "PHP",
+            percentage: 0.2,
+            endText: "20%"
+        }
+    ],
+    "Frontend": [
+        {
+            text: "HTML",
+            percentage: 0.5,
+            endText: "50%"
+        },
+        {
+            icon: "/images/css-icon.svg",
+            text: "CSS",
+            percentage: 0.4,
+            endText: "40%"
         },
         {
             icon: "/images/react-icon.svg",
@@ -75,11 +166,40 @@ export const skills: Skills = {
             icon: "/images/astrojs-icon.svg",
             text: "Astro.js",
             percentage: 0.2,
-            endText: "20%" 
+            endText: "20%"
         },
         {
             icon: "/images/bootstrap-icon.svg",
             text: "Bootstrap",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            icon: "/images/tailwind-icon.svg",
+            text: "Tailwind",
+            percentage: 0.2,
+            endText: "20%"
+        },
+        {
+            icon: "/images/mui-icon.svg",
+            text: "Material UI",
+            percentage: 0.25,
+            endText: "25%"
+        },
+        {
+            text: "Styled Components",
+            percentage: 0.3,
+            endText: "30%"
+        }
+    ],
+    "Backend": [
+        {
+            text: "ASP.NET Core",
+            percentage: 0.4,
+            endText: "40%"
+        },
+        {
+            text: "FastAPI",
             percentage: 0.4,
             endText: "40%"
         },
@@ -90,62 +210,37 @@ export const skills: Skills = {
             endText: "20%"
         },
         {
-            icon: "/images/css-icon.svg",
-            text: "CSS",
-            percentage: 0.4,
-            endText: "40%"
+            text: "NestJS",
+            percentage: 0.3,
+            endText: "30%"
         },
-        {
-            icon: "/images/mui-icon.svg",
-            text: "Material UI",
-            percentage: 0.25,
-            endText: "25%"
-        },
-        {
-            icon: "/images/tailwind-icon.svg",
-            text: "Tailwind",
-            percentage: 0.2,
-            endText: "20%"
-        },
-    ],
-    Backend: [
         {
             icon: "/images/springboot-icon.svg",
-            text: "SpringBoot",
+            text: "Spring Boot",
             percentage: 0.4,
             endText: "40%"
-        },
-        {
-            icon: "/images/php-icon.svg",
-            text: "PHP",
-            percentage: 0.2,
-            endText: "20%"
-        },
-        {
-            icon: "/images/java-icon.svg",
-            text: "Java",
-            percentage: 0.4,
-            endText: "40%"
-        },
-        {
-            icon: "/images/kotlin-icon.svg",
-            text: "Kotlin",
-            percentage: 0.3,
-            endText: "30%"
         }
     ],
-    "Data Bases": [
+    "DevOps y Herramientas": [
         {
-            icon: "/images/mysql-icon.svg",
-            text: "MySQL",
-            percentage: 0.4,
-            endText: "40%"
+            text: "Git",
+            percentage: 0.5,
+            endText: "50%"
         },
         {
-            icon: "/images/oracle-icon.svg",
-            text: "Oracle",
+            text: "Docker",
             percentage: 0.3,
             endText: "30%"
+        },
+        {
+            text: "Azure DevOps",
+            percentage: 0.3,
+            endText: "30%"
+        },
+        {
+            text: "APIs REST",
+            percentage: 0.4,
+            endText: "40%"
         }
     ],
     "Diseño": [
@@ -158,19 +253,19 @@ export const skills: Skills = {
         {
             icon: "/images/illustrator-icon.svg",
             text: "Adobe Illustrator",
-            percentage: 0.25, 
+            percentage: 0.25,
             endText: "25%"
         }
     ],
     "Idiomas": [
         {
             text: "Español",
-            percentage: 1, 
+            percentage: 1,
             endText: "Nativo"
         },
         {
             text: "Inglés",
-            percentage: 0.4, 
+            percentage: 0.4,
             endText: "B1"
         }
     ]
@@ -196,21 +291,63 @@ export const education: AcademicCardProps[] = [
         image: "/images/unah-logo.jpg",
         title: "Universidad Nacional Autónoma de Honduras",
         subtitle: "Ingeniería en Sistemas",
-        footText: "2020 - Actualidad"
+        footText: "2021-2026"
+    },
+]
+
+export const professionalCertifications: AcademicCardProps[] = [
+    {
+        image: "/images/certificates/databricks-analyst-cert.png",
+        title: "Databricks Certified Data Analyst Associate",
+        subtitle: "Databricks Academy",
+        footText: "Agosto 2026 - Agosto 2028"
+    },
+]
+
+export const coursesAccreditations: AcademicCardProps[] = [
+    {
+        image: "/images/certificates/databricks-aibi-analyst.png",
+        title: "Data Analyst Learning Plan: AI/BI Genie & SQL",
+        subtitle: "Databricks",
+        footText: "Marzo 2026"
     },
     {
-        image: "/images/alura-logo.png",
-        title: "Oracle Next Education & Alura Latam",
-        subtitle: "Formación FrontEnd",
-        footText: "30 Mar. 2023 - 22 Sep. 2023",
-        href: "https://app.aluracursos.com/program/certificate/d6263e57-185f-46d9-ab4b-f2fce591c67e"
+        image: "/images/certificates/databricks-fundamentals.png",
+        title: "Academy Accreditation: Databricks Fundamentals",
+        subtitle: "Databricks",
+        footText: "Marzo 2026"
+    },
+    {
+        image: "/images/certificates/tableau-az-udemy.jpg",
+        title: "Tableau de la A a la Z: Domina Tableau",
+        subtitle: "Udemy",
+        footText: "Mayo 2026"
+    },
+    {
+        image: "/images/certificates/power-bi-santander.jpg",
+        title: "Fundamentos de Power BI",
+        subtitle: "Santander Open Academy",
+        footText: "Agosto 2026"
     },
     {
         image: "/images/cisco-logo.png",
-        title: "Cisco Networking Academy",
-        subtitle: "CCNA1 Network Funtamentals",
-        footText: "10 Jun. 2024 - 20 Dic. 2024",
+        title: "CCNA 1: Introduction to Networks",
+        subtitle: "Cisco",
+        footText: "Diciembre 2024",
         href: "https://www.credly.com/badges/f866d20a-1a1b-4114-a939-8dfc7715d1b4/linked_in_profile"
+    },
+    {
+        image: "/images/cisco-logo.png",
+        title: "Python Essentials 1",
+        subtitle: "Cisco",
+        footText: "Mayo 2024"
+    },
+    {
+        image: "/images/alura-logo.png",
+        title: "Formación Front-end Oracle Next Education",
+        subtitle: "Oracle & Alura Latam",
+        footText: "Septiembre 2023",
+        href: "https://app.aluracursos.com/program/certificate/d6263e57-185f-46d9-ab4b-f2fce591c67e"
     },
 ]
 
