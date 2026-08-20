@@ -10,6 +10,13 @@ export default defineConfig({
       plugins: [tailwindcss()]
   },
   integrations: [mdx()],
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
   markdown: {
     shikiConfig: {
       theme: 'dracula',

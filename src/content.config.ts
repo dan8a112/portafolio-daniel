@@ -1,0 +1,125 @@
+import { defineCollection, z } from 'astro:content'
+import { glob } from 'astro/loaders'
+
+const localizedText = z.object({
+  es: z.string(),
+  en: z.string(),
+})
+
+const contentBlockSchema = z.object({
+  title: localizedText,
+  paragraph: localizedText,
+  image: z.string(),
+  imageAlt: localizedText,
+  imageRight: z.boolean().default(false),
+})
+
+const sectionSchema = z.discriminatedUnion('type', [
+  z.object({
+    type: z.literal('hero'),
+    greeting: localizedText,
+    label: localizedText,
+    name: z.string(),
+    role: localizedText,
+    paragraph: localizedText,
+    image: z.string(),
+    imageAlt: localizedText,
+  }),
+  z.object({
+    type: z.literal('content'),
+    blocks: z.array(contentBlockSchema),
+  }),
+  z.object({
+    type: z.literal('linkCards'),
+    title: localizedText,
+    links: z.array(
+      z.object({
+        label: localizedText,
+        href: z.string(),
+      })
+    ),
+  }),
+  z.object({
+    type: z.literal('featuredProjects'),
+    title: localizedText,
+    projectSlugs: z.array(z.string()),
+  }),
+])
+
+const site = defineCollection({
+  loader: glob({ pattern: 'site.json', base: './src/content/site' }),
+  schema: z.object({
+    brand: z.string(),
+    nav: z.array(
+      z.object({
+        label: localizedText,
+        href: z.string(),
+      })
+    ),
+    socials: z.array(
+      z.object({
+        icon: z.string(),
+        url: z.string(),
+        altText: localizedText,
+      })
+    ),
+  }),
+})
+
+const home = defineCollection({
+  loader: glob({ pattern: 'home.json', base: './src/content/home' }),
+  schema: z.object({
+    sections: z.array(sectionSchema),
+  }),
+})
+
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    image: z.string(),
+    skills: z.array(z.string()),
+    featured: z.boolean().default(false),
+    order: z.number().default(0),
+    publishedAt: z.coerce.date().optional(),
+  }),
+})
+
+const skillCategory = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/skills' }),
+  schema: z.object({
+    id: z.string(),
+    title: localizedText,
+    icon: z.string().optional(),
+    items: z.array(
+      z.object({
+        text: localizedText,
+        percentage: z.number(),
+        endText: z.string(),
+        icon: z.string().optional(),
+      })
+    ),
+  }),
+})
+
+const academic = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/academic' }),
+  schema: z.object({
+    kind: z.enum(['education', 'certification', 'course']),
+    image: z.string(),
+    title: localizedText,
+    subtitle: localizedText,
+    period: localizedText,
+    href: z.string().optional(),
+    order: z.number(),
+  }),
+})
+
+export const collections = {
+  site,
+  home,
+  projects,
+  skillCategory,
+  academic,
+}
