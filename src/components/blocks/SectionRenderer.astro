@@ -1,0 +1,32 @@
+---
+import type { Project, Section } from "../../types/domain";
+import HeroBlock from "./HeroBlock.astro";
+import ContentSectionBlock from "./ContentSectionBlock.astro";
+import LinkCardsBlock from "./LinkCardsBlock.astro";
+import FeaturedProjectsBlock from "./FeaturedProjectsBlock.astro";
+
+interface Props {
+  sections: Section[];
+  featuredProjects?: Project[];
+  socials?: { icon: string; url: string; altText: string }[];
+}
+
+const { sections, featuredProjects = [], socials = [] } = Astro.props;
+---
+
+{
+  sections.map((section) => {
+    switch (section.type) {
+      case 'hero':
+        return <HeroBlock section={section} socials={socials} />;
+      case 'content':
+        return <ContentSectionBlock section={section} />;
+      case 'linkCards':
+        return <LinkCardsBlock section={section} />;
+      case 'featuredProjects':
+        return <FeaturedProjectsBlock section={section} projects={featuredProjects} />;
+      default:
+        return null;
+    }
+  })
+}

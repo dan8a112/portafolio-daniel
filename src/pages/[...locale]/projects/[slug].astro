@@ -1,18 +1,21 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
-import "../../styles/projects.css"
-import Layout from "../../layouts/Layout.astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import "../../../styles/projects.css"
+import Layout from "../../../layouts/Layout.astro";
+import { getLocaleFromUrl, useTranslations } from "../../../lib/i18n";
 
-type Project = CollectionEntry<'projects'> & {
-    render: ()=>Promise<{Content: any; headings: any[]}>
-} & {slug: string};
+type Project = CollectionEntry<'projects'>;
 
 export async function getStaticPaths() {
     const projectEntries: Project[] = await getCollection('projects');
-    return projectEntries.map(entry=> ({
-        params: {slug: entry.slug},
-        props: {entry}
-    }));
+    return ['es', 'en'].flatMap((locale) =>
+        projectEntries
+            .filter((entry) => entry.id.startsWith(`${locale}/`))
+            .map((entry) => ({
+                params: { locale, slug: entry.id.replace(`${locale}/`, '') },
+                props: { entry },
+            }))
+    );
 }
 
 interface Props{
@@ -20,7 +23,9 @@ interface Props{
 }
 
 const {entry} = Astro.props;
-const {Content, headings} = await entry.render();
+const {Content, headings} = await render(entry);
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = useTranslations(locale);
 
 ---
 
@@ -30,7 +35,7 @@ const {Content, headings} = await entry.render();
         <p class="text-xl text-primary-white mb-8">{entry.data.description}</p>
     
         <nav class="toc mb-8 bg-background-bluedark p-5 rounded-lg w-[50%]">
-          <h2 class="text-2xl font-semibold mb-4 text-secondary-yellow">Tabla de contenido</h2>
+          <h2 class="text-2xl font-semibold mb-4 text-secondary-yellow">{t('project.toc')}</h2>
           <ul class="space-y-2">
             {headings.map((heading: any) => (
               <li class={`toc-level-${heading.depth} ml-${(heading.depth - 1) * 4}`}>

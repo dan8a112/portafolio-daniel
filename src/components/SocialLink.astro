@@ -1,15 +1,19 @@
 ---
-import { Image } from "astro:assets";
-import type { SocialLinkProps } from "../interfaces/interface.ts";
-const { icon, url, width, height, altText} = Astro.props as SocialLinkProps;
+import type { Site } from "../types/domain";
+
+interface Props {
+  social: Site['socials'][number];
+}
+
+const { social } = Astro.props;
 ---
 
-<a href={url} class="inline-block">
-    <img
-      src={icon}
-      alt={altText}
-      width={width}
-      height={height}
-      class="rounded-lg shadow-lg transform transition-all duration-300 hover:scale-95 hover:opacity-80"
-    />
-  </a>
+<a href={social.url} class="inline-block">
+  <img
+    src={social.icon}
+    alt={social.altText}
+    width="45"
+    height="45"
+    class="rounded-lg shadow-lg transform transition-all duration-300 hover:scale-95 hover:opacity-80"
+  />
+</a>

@@ -1,6 +1,10 @@
 ---
-import type { LinkItems } from "../interfaces/interface";
-const { text, href } = Astro.props as LinkItems;
+interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props as Props;
 ---
 
 <a href={href} class="bg-secondary-yellow px-3 py-1 rounded-lg hover:bg-secondary-yellow transition-all duration-300 hover:scale-95 hover:opacity-80">

@@ -1,30 +1,59 @@
 ---
 import { Image } from "astro:assets";
-import { headerItems } from "../content/data/db";
-const currentPath = Astro.url.pathname; //Ruta actual
+import { getSite } from "../lib/content";
+import { getLocaleFromUrl, getLocalizedPathname, localizePath, locales, useTranslations } from "../lib/i18n";
+
+const currentPath = Astro.url.pathname;
+const locale = getLocaleFromUrl(currentPath);
+const site = await getSite(locale);
+const t = useTranslations(locale);
+
+const localizedNav = site.nav.map((item) => ({
+  ...item,
+  href: localizePath(item.href, locale),
+}));
 ---
 
 <header class="bg-background-bluedark shadow-md">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Título (lado derecho) -->
-    <a class="flex items-center" href="/">
-      <Image alt={"Icono Daniel"} src={"/images/d-logo.svg"} width={30} height={30} class={"mr-3"}></Image>
-      <h1 class="text-2xl font-bold text-primary-white hidden md:block">Daniel Ochoa</h1>
+    <a class="flex items-center" href={localizePath('/', locale)}>
+      <Image alt={t('header.logoAlt')} src={"/images/d-logo.svg"} width={30} height={30} class={"mr-3"}></Image>
+      <h1 class="text-2xl font-bold text-primary-white hidden md:block">{site.brand}</h1>
     </a>
 
     <!-- Opciones del menú (lado izquierdo) -->
     <nav class="flex space-x-6 text-primary-white">
       {
-        headerItems.map((item) => (
+        localizedNav.map((item) => (
           <a
             href={item.href}
             class={`hover:border-b-1 hover:border-secondary-yellow transition-colors 
         ${currentPath === item.href ? "border-b-1 border-secondary-yellow" : ""}`}
           >
-            {item.text}
+            {item.label}
           </a>
         ))
       }
     </nav>
+
+    <!-- Language switcher -->
+    <div class="flex items-center gap-2 ml-4" aria-label={t('lang.switch')}>
+      {
+        locales.map((lang) => (
+          <a
+            href={getLocalizedPathname(currentPath, lang)}
+            class={`px-2 py-1 rounded text-sm font-medium transition-colors ${
+              lang === locale
+                ? 'bg-secondary-yellow text-background-bluedark'
+                : 'text-primary-white hover:text-secondary-yellow'
+            }`}
+            aria-current={lang === locale ? 'true' : undefined}
+          >
+            {t(`lang.${lang}`)}
+          </a>
+        ))
+      }
+    </div>
   </div>
 </header>

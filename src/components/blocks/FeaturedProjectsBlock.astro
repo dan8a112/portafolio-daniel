@@ -1,0 +1,26 @@
+---
+import type { Project, Section } from "../../types/domain";
+import ProjectCard from "../ProjectCard.astro";
+
+interface Props {
+  section: Extract<Section, { type: 'featuredProjects' }>;
+  projects: Project[];
+}
+
+const { section, projects } = Astro.props;
+const featuredProjects = section.projectSlugs
+  .map((slug) => projects.find((project) => project.slug === slug))
+  .filter((project): project is Project => Boolean(project));
+---
+
+<section class="container mx-auto px-6 py-8">
+  <h2 class="text-3xl mb-6 text-primary-white">{section.title}</h2>
+  <div class="flex flex-col gap-6">
+    {featuredProjects.map((project) => (
+      <ProjectCard
+        {...project}
+        href={`/projects/${project.slug}`}
+      />
+    ))}
+  </div>
+</section>

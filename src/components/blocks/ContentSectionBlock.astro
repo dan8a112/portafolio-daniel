@@ -1,0 +1,16 @@
+---
+import type { Section } from "../../types/domain";
+import ContentBlock from "../ContentBlock.astro";
+
+interface Props {
+  section: Extract<Section, { type: 'content' }>;
+}
+
+const { section } = Astro.props;
+---
+
+{
+  section.blocks.map((block) => (
+    <ContentBlock {...block} />
+  ))
+}

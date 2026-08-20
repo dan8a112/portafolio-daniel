@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import type { ContentBlockProps } from "../interfaces/interface";
-const {title, paragraph, image, imageAlt, imageRight} = Astro.props as ContentBlockProps
+import type { ContentBlock } from "../types/domain";
+const {title, paragraph, image, imageAlt, imageRight} = Astro.props as ContentBlock
 
-const splitedTitle = title.split(" "); //Se separan las palabras de los titulos
+const splitedTitle = title.split(" ");
 ---
 
 <section class="py-8 animate-slideUp-delayed">

@@ -1,0 +1,33 @@
+---
+import ProjectCard from "../../components/ProjectCard.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getProjects } from "../../lib/content";
+import { useTranslations } from "../../lib/i18n";
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }]
+}
+
+const locale = Astro.params.locale as 'es' | 'en'
+const projects = (await getProjects(locale)).sort((a, b) => a.order - b.order)
+const t = useTranslations(locale)
+---
+
+<Layout>
+  <section class="py-10">
+    <div class="container mx-auto px-8 flex flex-col gap-8 w-[95%]">
+      <h2 class="text-3xl font-bold text-primary-white">{t('projects.title')}</h2>
+      {
+        projects.map((project) => (
+          <ProjectCard
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            href={`/projects/${project.slug}`}
+            skills={project.skills}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

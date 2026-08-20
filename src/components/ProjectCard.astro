@@ -1,7 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import type { ProjectCardProps } from "../interfaces/interface";
-const {image, title, description, skills, href} = Astro.props as ProjectCardProps;
+import type { Project } from "../types/domain";
+import { getLocaleFromUrl, localizePath, useTranslations } from "../lib/i18n";
+const {image, title, description, skills, href} = Astro.props as Project & { href: string };
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const localizedHref = localizePath(href, locale);
+const t = useTranslations(locale);
 ---
 
 <div class="bg-background-bluedark p-6 shadow-md rounded-xl animate-fadeInLeft">
@@ -9,7 +13,7 @@ const {image, title, description, skills, href} = Astro.props as ProjectCardProp
         <!--Imagen -->
         <Image 
         src={image}
-        alt={"Imagen de proyecto"}
+        alt={t('project.imageAlt')}
         width={200}
         height={200}
         class="rounded-lg shadow-lg"/>
@@ -21,8 +25,8 @@ const {image, title, description, skills, href} = Astro.props as ProjectCardProp
                 {skills.map(skill=> (<div class="px-3 py-1 rounded-2xl border border-primary-white text-primary-white">{skill}</div>))}
             </div>
             <div class="flex justify-end">
-                <a href={href}>
-                    <div class="px-4 py-2 border-none bg-secondary-yellow rounded-xl text-background-bluedark">Ver más</div>
+                <a href={localizedHref}>
+                    <div class="px-4 py-2 border-none bg-secondary-yellow rounded-xl text-background-bluedark">{t('project.seeMore')}</div>
                 </a>
             </div>
         </div>

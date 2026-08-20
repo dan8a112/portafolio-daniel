@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getHome, getProjects, getSite } from "../../lib/content";
+import SectionRenderer from "../../components/blocks/SectionRenderer.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }]
+}
+
+const locale = Astro.params.locale as 'es' | 'en'
+const [site, home, projects] = await Promise.all([
+  getSite(locale),
+  getHome(locale),
+  getProjects(locale),
+])
+---
+
+<Layout>
+  <SectionRenderer
+    sections={home.sections}
+    socials={site.socials}
+    featuredProjects={projects}
+  />
+</Layout>

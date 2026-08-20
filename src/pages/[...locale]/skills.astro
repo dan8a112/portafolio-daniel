@@ -1,0 +1,20 @@
+---
+import SkillCategory from "../../components/SkillCategory.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getSkillCategories } from "../../lib/content";
+import { useTranslations } from "../../lib/i18n";
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }]
+}
+
+const locale = Astro.params.locale as 'es' | 'en'
+const categories = await getSkillCategories(locale)
+const t = useTranslations(locale)
+---
+
+<Layout>
+  <section class="py-10">
+    <SkillCategory categories={categories} title={t('nav.skills')} />
+  </section>
+</Layout>

@@ -1,7 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import type { SkillItem } from "../interfaces/interface";
+import type { SkillItem } from "../types/domain";
+import { getLocaleFromUrl, useTranslations } from "../lib/i18n";
 const { icon, text, percentage, endText } = Astro.props as SkillItem;
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = useTranslations(locale);
 ---
 
 <div class="bg-tertiary-lightblue p-4 rounded-lg shadow-md">
@@ -11,7 +14,7 @@ const { icon, text, percentage, endText } = Astro.props as SkillItem;
       <!-- Ícono -->
       {
         icon && (
-          <Image src={icon} alt={"Icono de skill"} width={40} height={40} />
+          <Image src={icon} alt={t('skills.iconAlt')} width={40} height={40} />
         )
       }
       <!-- Texto -->

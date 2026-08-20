@@ -1,16 +1,24 @@
 ---
 import Header from "../components/Header.astro"
+import { getLocaleFromUrl, getLocalizedPathname, locales, useTranslations } from "../lib/i18n"
 import "../styles/global.css"
+
+const locale = getLocaleFromUrl(Astro.url.pathname)
+const t = useTranslations(locale)
+const canonicalPath = Astro.url.pathname
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portafolio Daniel Ochoa</title>
+		<title>{t('site.title')}</title>
+		{locales.map((lang) => (
+			<link rel="alternate" hreflang={lang} href={Astro.site ? new URL(getLocalizedPathname(canonicalPath, lang), Astro.site).href : getLocalizedPathname(canonicalPath, lang)} />
+		))}
 	</head>
 	<body class="bg-background-blue">
 		<Header />

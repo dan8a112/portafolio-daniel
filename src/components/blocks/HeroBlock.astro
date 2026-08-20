@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import type { Section, Site } from "../../types/domain";
+import SocialLink from "../SocialLink.astro";
+
+interface Props {
+  section: Extract<Section, { type: 'hero' }>;
+  socials: Site['socials'];
+}
+
+const { section, socials } = Astro.props;
+const splitedName = section.name.split(" ");
+---
+
+<section class="py-10">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <!-- Contenido de texto (izquierda) -->
+    <div class="md:w-1/2 space-y-3">
+      <div class="animate-fadeInLeft">
+        <span class="text-3xl text-primary-white">{section.greeting}</span>
+        <span class="text-3xl text-secondary-yellow">{section.label}</span>
+        <h2 class="text-4xl font-bold text-secondary-yellow">
+          {splitedName.map((part) => (
+            <span class="mr-2">{part}</span>
+          ))}
+        </h2>
+      </div>
+      <div class="animate-fadeInLeft">
+        <span class="text-xl text-primary-white">{section.role}</span>
+      </div>
+      <p class="text-primary-white text-lg mt-4 mb-5 animate-fadeInLeft" set:html={section.paragraph}></p>
+      <div class="flex flex-row items-center gap-4 animate-fadeInLeft">
+        {socials.map((social) => <SocialLink social={social} />)}
+      </div>
+    </div>
+
+    <!-- Imagen (derecha) -->
+    <div class="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+      <Image
+        src={section.image}
+        alt={section.imageAlt}
+        width={300}
+        height={300}
+        class="rounded-full border-4 border-secondary-yellow object-cover animate-fadeInRight"
+      />
+    </div>
+  </div>
+</section>

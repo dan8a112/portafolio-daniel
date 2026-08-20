@@ -1,0 +1,54 @@
+---
+import AcademicCard from "../../components/AcademicCard.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getAcademic } from "../../lib/content";
+import { useTranslations } from "../../lib/i18n";
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'es' } }, { params: { locale: 'en' } }]
+}
+
+const locale = Astro.params.locale as 'es' | 'en'
+const entries = await getAcademic(locale)
+const education = entries.filter(e => e.kind === 'education').sort((a, b) => a.order - b.order)
+const certifications = entries.filter(e => e.kind === 'certification').sort((a, b) => a.order - b.order)
+const courses = entries.filter(e => e.kind === 'course').sort((a, b) => a.order - b.order)
+const t = useTranslations(locale)
+---
+
+<Layout>
+  <section class="py-10">
+    <div class="container mx-auto px-6 flex flex-col gap-8 my-5">
+      <h2 class="text-2xl font-bold text-primary-white">{t('education.education')}</h2>
+      {
+        education.map((item) => (
+          <div class="animate-slideUp">
+            <AcademicCard {...item} />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="container mx-auto px-6 flex flex-col gap-8 my-5">
+      <h2 class="text-2xl font-bold text-primary-white">{t('education.certifications')}</h2>
+      {
+        certifications.map((item) => (
+          <div class="animate-slideUp-delayed">
+            <AcademicCard {...item} />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="container mx-auto px-6 flex flex-col gap-8 my-5">
+      <h2 class="text-2xl font-bold text-primary-white">{t('education.courses')}</h2>
+      {
+        courses.map((item) => (
+          <div class="animate-slideUp-delayed">
+            <AcademicCard {...item} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
