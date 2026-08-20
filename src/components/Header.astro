@@ -25,8 +25,8 @@ const localizedNav = site.nav.map((item) => ({
         <span class="text-lg font-semibold text-white hidden sm:block">{site.brand}</span>
       </a>
 
-      <!-- Nav -->
-      <nav class="flex items-center gap-1">
+      <!-- Navegación de escritorio -->
+      <nav class="hidden items-center gap-1 md:flex">
         {
           localizedNav.map((item) => {
             const isActive = currentPath === item.href;
@@ -44,8 +44,8 @@ const localizedNav = site.nav.map((item) => ({
         }
       </nav>
 
-      <!-- Language switcher -->
-      <div class="flex items-center rounded-lg border border-border bg-surface p-1" aria-label={t('lang.switch')}>
+      <!-- Selector de idioma de escritorio -->
+      <div class="hidden items-center rounded-lg border border-border bg-surface p-1 md:flex" aria-label={t('lang.switch')}>
         {
           locales.map((lang) => (
             <a
@@ -60,6 +60,56 @@ const localizedNav = site.nav.map((item) => ({
           ))
         }
       </div>
+
+      <!-- Menú móvil: evita que navegación e idiomas desborden el header. -->
+      <details class="relative md:hidden">
+        <summary
+          class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-border bg-surface text-white transition-colors hover:border-primary hover:text-primary [&::-webkit-details-marker]:hidden"
+          aria-label={t('header.menu')}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </summary>
+
+        <div class="absolute right-0 top-12 z-50 w-64 rounded-xl border border-border bg-surface p-2 shadow-xl">
+          <nav class="flex flex-col gap-1">
+            {
+              localizedNav.map((item) => {
+                const isActive = currentPath === item.href;
+                return (
+                  <a
+                    href={item.href}
+                    class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                      isActive ? 'bg-primary text-white' : 'text-neutral hover:bg-black hover:text-white'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })
+            }
+          </nav>
+
+          <div class="mt-2 flex items-center gap-1 border-t border-border pt-2" aria-label={t('lang.switch')}>
+            {
+              locales.map((lang) => (
+                <a
+                  href={getLocalizedPathname(currentPath, lang)}
+                  class={`flex-1 rounded-md px-3 py-2 text-center text-sm font-medium transition-colors ${
+                    lang === locale ? 'bg-primary text-white' : 'text-neutral hover:bg-black hover:text-white'
+                  }`}
+                  aria-current={lang === locale ? 'page' : undefined}
+                >
+                  {t(`lang.${lang}`)}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </details>
     </div>
   </div>
 </header>

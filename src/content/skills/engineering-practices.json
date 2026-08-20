@@ -1,0 +1,17 @@
+{
+  "id": "engineering-practices",
+  "title": { "es": "Engineering Practices", "en": "Engineering Practices" },
+  "description": {
+    "es": "Trabajo con buenas prácticas de desarrollo, colaboración y entrega de soluciones en equipos técnicos.",
+    "en": "Work with development best practices, collaboration, and solution delivery in technical teams."
+  },
+  "icon": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\"/>",
+  "order": 4,
+  "items": [
+    { "text": { "es": "Git", "en": "Git" } },
+    { "text": { "es": "Docker", "en": "Docker" } },
+    { "text": { "es": "Azure DevOps", "en": "Azure DevOps" } },
+    { "text": { "es": "GitHub Actions", "en": "GitHub Actions" } },
+    { "text": { "es": "APIs REST", "en": "REST APIs" } }
+  ]
+}

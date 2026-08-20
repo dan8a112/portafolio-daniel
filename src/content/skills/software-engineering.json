@@ -1,0 +1,18 @@
+{
+  "id": "software-engineering",
+  "title": { "es": "Software Engineering", "en": "Software Engineering" },
+  "description": {
+    "es": "Desarrollo de aplicaciones y servicios que combinan frontend, backend, APIs y lógica de negocio.",
+    "en": "Development of applications and services that combine frontend, backend, APIs, and business logic."
+  },
+  "icon": "<polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/>",
+  "order": 3,
+  "items": [
+    { "text": { "es": "React", "en": "React" } },
+    { "text": { "es": "Next.js", "en": "Next.js" } },
+    { "text": { "es": "Astro", "en": "Astro" } },
+    { "text": { "es": "Spring Boot", "en": "Spring Boot" } },
+    { "text": { "es": "ASP.NET Core", "en": "ASP.NET Core" } },
+    { "text": { "es": "MySQL", "en": "MySQL" } }
+  ]
+}

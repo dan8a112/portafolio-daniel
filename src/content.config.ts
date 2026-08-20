@@ -141,7 +141,9 @@ const skillCategory = defineCollection({
   schema: z.object({
     id: z.string(),
     title: localizedText,
+    description: localizedText,
     icon: z.string().optional(),
+    order: z.number(),
     items: z.array(
       z.object({
         text: localizedText,

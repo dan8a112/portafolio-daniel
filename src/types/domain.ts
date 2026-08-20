@@ -70,7 +70,9 @@ export interface Project {
 export interface SkillCategory {
   id: string
   title: string
+  description: string
   icon?: string
+  order: number
   items: SkillItem[]
 }
 

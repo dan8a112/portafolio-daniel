@@ -171,14 +171,18 @@ async function loadProjects(locale: Locale): Promise<Project[]> {
 
 async function loadSkillCategories(locale: Locale): Promise<SkillCategory[]> {
   const entries = await getCollection('skillCategory')
-  return entries.map((entry) => ({
-    id: entry.data.id,
-    title: entry.data.title[locale],
-    icon: entry.data.icon,
-    items: entry.data.items.map((item) => ({
-      text: item.text[locale],
-    })),
-  }))
+  return entries
+    .map((entry) => ({
+      id: entry.data.id,
+      title: entry.data.title[locale],
+      description: entry.data.description[locale],
+      icon: entry.data.icon,
+      order: entry.data.order,
+      items: entry.data.items.map((item) => ({
+        text: item.text[locale],
+      })),
+    }))
+    .sort((a, b) => a.order - b.order)
 }
 
 async function loadAcademic(locale: Locale): Promise<AcademicEntry[]> {
