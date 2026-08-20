@@ -110,6 +110,31 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           type: 'skills',
           title: t(section.title, locale),
         }
+      case 'education':
+        return {
+          type: 'education',
+          title: t(section.title, locale),
+          educationTitle: t(section.educationTitle, locale),
+          certificatesTitle: t(section.certificatesTitle, locale),
+        }
+      case 'about':
+        return {
+          type: 'about',
+          title: t(section.title, locale),
+          paragraphs: section.paragraphs.map((paragraph: LocalizedText) => t(paragraph, locale)),
+          cta: {
+            label: t(section.cta.label, locale),
+            href: section.cta.href,
+          },
+          image: section.image,
+          imageAlt: t(section.imageAlt, locale),
+        }
+      case 'contact':
+        return {
+          type: 'contact',
+          title: t(section.title, locale),
+          paragraphs: section.paragraphs.map((paragraph: LocalizedText) => t(paragraph, locale)),
+        }
       default:
         return section as Section
     }

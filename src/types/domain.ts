@@ -35,6 +35,16 @@ export type Section =
   | { type: 'highlights'; items: { label: string; value: string; icon?: string }[] }
   | { type: 'experience'; title: string }
   | { type: 'skills'; title: string }
+  | { type: 'education'; title: string; educationTitle: string; certificatesTitle: string }
+  | {
+      type: 'about'
+      title: string
+      paragraphs: string[]
+      cta: { label: string; href: string }
+      image: string
+      imageAlt: string
+    }
+  | { type: 'contact'; title: string; paragraphs: string[] }
 
 export interface ContentBlock {
   title: string

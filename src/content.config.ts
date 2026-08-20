@@ -71,6 +71,28 @@ const sectionSchema = z.discriminatedUnion('type', [
     type: z.literal('skills'),
     title: localizedText,
   }),
+  z.object({
+    type: z.literal('education'),
+    title: localizedText,
+    educationTitle: localizedText,
+    certificatesTitle: localizedText,
+  }),
+  z.object({
+    type: z.literal('about'),
+    title: localizedText,
+    paragraphs: z.array(localizedText),
+    cta: z.object({
+      label: localizedText,
+      href: z.string(),
+    }),
+    image: z.string(),
+    imageAlt: localizedText,
+  }),
+  z.object({
+    type: z.literal('contact'),
+    title: localizedText,
+    paragraphs: z.array(localizedText),
+  }),
 ])
 
 const site = defineCollection({

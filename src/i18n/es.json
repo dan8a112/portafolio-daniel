@@ -16,5 +16,13 @@
   "education.education": "Educación",
   "education.certifications": "Certificaciones Profesionales",
   "education.courses": "Cursos y Acreditaciones",
-  "education.imageAlt": "Organización de estudio"
+  "education.imageAlt": "Organización de estudio",
+  "education.exploreAll": "Ver formación y certificaciones",
+  "contact.name": "Nombre",
+  "contact.namePlaceholder": "Tu nombre",
+  "contact.email": "Correo electrónico",
+  "contact.emailPlaceholder": "tu@correo.com",
+  "contact.message": "Mensaje",
+  "contact.messagePlaceholder": "¿En qué podemos colaborar?",
+  "contact.submit": "Enviar mensaje"
 }

@@ -84,7 +84,17 @@
   }
 
   /* Énfasis dentro de párrafos renderizados con set:html (hero) */
-  .hero-paragraph strong {
-    color: var(--palette-white);
-    font-weight: 600;
-  }
+   .hero-paragraph strong {
+     color: var(--palette-white);
+     font-weight: 600;
+   }
+
+   .about-paragraph strong {
+     color: var(--palette-white);
+     font-weight: 600;
+   }
+
+   .contact-paragraph strong {
+     color: var(--palette-white);
+     font-weight: 600;
+   }

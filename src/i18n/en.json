@@ -16,5 +16,13 @@
   "education.education": "Education",
   "education.certifications": "Professional Certifications",
   "education.courses": "Courses & Accreditations",
-  "education.imageAlt": "Study organization"
+  "education.imageAlt": "Study organization",
+  "education.exploreAll": "View education and certifications",
+  "contact.name": "Name",
+  "contact.namePlaceholder": "Your name",
+  "contact.email": "Email",
+  "contact.emailPlaceholder": "you@email.com",
+  "contact.message": "Message",
+  "contact.messagePlaceholder": "How can we collaborate?",
+  "contact.submit": "Send message"
 }
