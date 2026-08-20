@@ -67,6 +67,10 @@ const sectionSchema = z.discriminatedUnion('type', [
     type: z.literal('experience'),
     title: localizedText,
   }),
+  z.object({
+    type: z.literal('skills'),
+    title: localizedText,
+  }),
 ])
 
 const site = defineCollection({
@@ -101,6 +105,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.string(),
     image: z.string(),
     skills: z.array(z.string()),
     featured: z.boolean().default(false),
@@ -118,9 +123,6 @@ const skillCategory = defineCollection({
     items: z.array(
       z.object({
         text: localizedText,
-        percentage: z.number(),
-        endText: z.string(),
-        icon: z.string().optional(),
       })
     ),
   }),

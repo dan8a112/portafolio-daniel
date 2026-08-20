@@ -105,6 +105,11 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           type: 'experience',
           title: t(section.title, locale),
         }
+      case 'skills':
+        return {
+          type: 'skills',
+          title: t(section.title, locale),
+        }
       default:
         return section as Section
     }
@@ -128,6 +133,7 @@ async function loadProjects(locale: Locale): Promise<Project[]> {
         slug,
         title: entry.data.title,
         description: entry.data.description,
+        category: entry.data.category,
         body: '',
         image: entry.data.image,
         skills: entry.data.skills,
@@ -146,9 +152,6 @@ async function loadSkillCategories(locale: Locale): Promise<SkillCategory[]> {
     icon: entry.data.icon,
     items: entry.data.items.map((item) => ({
       text: item.text[locale],
-      percentage: item.percentage,
-      endText: item.endText,
-      icon: item.icon,
     })),
   }))
 }

@@ -1,7 +1,6 @@
 {
   "site.title": "Daniel Ochoa Portfolio",
   "nav.home": "Home",
-  "nav.skills": "Skills",
   "nav.education": "Education",
   "nav.projects": "Projects",
   "header.logoAlt": "Daniel logo",
@@ -9,12 +8,13 @@
   "lang.en": "English",
   "lang.switch": "Switch language",
   "projects.title": "Projects",
+  "projects.exploreAll": "Explore all projects",
   "project.toc": "Table of contents",
   "project.imageAlt": "Project image",
   "project.seeMore": "See more",
+  "project.viewProject": "View project",
   "education.education": "Education",
   "education.certifications": "Professional Certifications",
   "education.courses": "Courses & Accreditations",
-  "education.imageAlt": "Study organization",
-  "skills.iconAlt": "Skill icon"
+  "education.imageAlt": "Study organization"
 }

@@ -1,7 +1,6 @@
 {
   "site.title": "Portafolio Daniel Ochoa",
   "nav.home": "Inicio",
-  "nav.skills": "Habilidades",
   "nav.education": "Formación",
   "nav.projects": "Proyectos",
   "header.logoAlt": "Logo de Daniel",
@@ -9,12 +8,13 @@
   "lang.en": "English",
   "lang.switch": "Cambiar idioma",
   "projects.title": "Proyectos",
+  "projects.exploreAll": "Explorar todos los proyectos",
   "project.toc": "Tabla de contenido",
   "project.imageAlt": "Imagen del proyecto",
   "project.seeMore": "Ver más",
+  "project.viewProject": "Ver proyecto",
   "education.education": "Educación",
   "education.certifications": "Certificaciones Profesionales",
   "education.courses": "Cursos y Acreditaciones",
-  "education.imageAlt": "Organización de estudio",
-  "skills.iconAlt": "Icono de habilidad"
+  "education.imageAlt": "Organización de estudio"
 }

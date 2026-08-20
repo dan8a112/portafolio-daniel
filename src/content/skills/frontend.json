@@ -3,14 +3,14 @@
   "title": { "es": "Frontend", "en": "Frontend" },
   "icon": "<rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"21\" y2=\"21\"/><line x1=\"12\" x2=\"12\" y1=\"17\" y2=\"21\"/>",
   "items": [
-    { "text": { "es": "HTML", "en": "HTML" }, "percentage": 0.5, "endText": "50%" },
-    { "text": { "es": "CSS", "en": "CSS" }, "percentage": 0.4, "endText": "40%", "icon": "/images/css-icon.svg" },
-    { "text": { "es": "React", "en": "React" }, "percentage": 0.4, "endText": "40%", "icon": "/images/react-icon.svg" },
-    { "text": { "es": "Next.js", "en": "Next.js" }, "percentage": 0.3, "endText": "30%", "icon": "/images/nextjs-icon.svg" },
-    { "text": { "es": "Astro.js", "en": "Astro.js" }, "percentage": 0.2, "endText": "20%", "icon": "/images/astrojs-icon.svg" },
-    { "text": { "es": "Bootstrap", "en": "Bootstrap" }, "percentage": 0.4, "endText": "40%", "icon": "/images/bootstrap-icon.svg" },
-    { "text": { "es": "Tailwind", "en": "Tailwind" }, "percentage": 0.2, "endText": "20%", "icon": "/images/tailwind-icon.svg" },
-    { "text": { "es": "Material UI", "en": "Material UI" }, "percentage": 0.25, "endText": "25%", "icon": "/images/mui-icon.svg" },
-    { "text": { "es": "Styled Components", "en": "Styled Components" }, "percentage": 0.3, "endText": "30%" }
+    { "text": { "es": "HTML", "en": "HTML" } },
+    { "text": { "es": "CSS", "en": "CSS" } },
+    { "text": { "es": "React", "en": "React" } },
+    { "text": { "es": "Next.js", "en": "Next.js" } },
+    { "text": { "es": "Astro.js", "en": "Astro.js" } },
+    { "text": { "es": "Bootstrap", "en": "Bootstrap" } },
+    { "text": { "es": "Tailwind", "en": "Tailwind" } },
+    { "text": { "es": "Material UI", "en": "Material UI" } },
+    { "text": { "es": "Styled Components", "en": "Styled Components" } }
   ]
 }

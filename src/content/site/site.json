@@ -2,7 +2,6 @@
   "brand": "Daniel Ochoa",
   "nav": [
     { "label": { "es": "Inicio", "en": "Home" }, "href": "/" },
-    { "label": { "es": "Habilidades", "en": "Skills" }, "href": "/skills" },
     { "label": { "es": "Formación", "en": "Education" }, "href": "/education" },
     { "label": { "es": "Proyectos", "en": "Projects" }, "href": "/projects" }
   ],

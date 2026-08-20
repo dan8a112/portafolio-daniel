@@ -34,6 +34,7 @@ export type Section =
   | { type: 'featuredProjects'; title: string; projectSlugs: string[] }
   | { type: 'highlights'; items: { label: string; value: string; icon?: string }[] }
   | { type: 'experience'; title: string }
+  | { type: 'skills'; title: string }
 
 export interface ContentBlock {
   title: string
@@ -47,6 +48,7 @@ export interface Project {
   slug: string
   title: string
   description: string
+  category: string
   body: string
   image: string
   skills: string[]
@@ -64,9 +66,6 @@ export interface SkillCategory {
 
 export interface SkillItem {
   text: string
-  percentage: number
-  endText: string
-  icon?: string
 }
 
 export interface AcademicEntry {

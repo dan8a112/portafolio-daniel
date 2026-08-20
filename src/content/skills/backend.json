@@ -3,10 +3,10 @@
   "title": { "es": "Backend", "en": "Backend" },
   "icon": "<rect width=\"20\" height=\"8\" x=\"2\" y=\"2\" rx=\"2\" ry=\"2\"/><rect width=\"20\" height=\"8\" x=\"2\" y=\"14\" rx=\"2\" ry=\"2\"/><line x1=\"6\" x2=\"6.01\" y1=\"6\" y2=\"6\"/><line x1=\"6\" x2=\"6.01\" y1=\"18\" y2=\"18\"/>",
   "items": [
-    { "text": { "es": "ASP.NET Core", "en": "ASP.NET Core" }, "percentage": 0.4, "endText": "40%" },
-    { "text": { "es": "FastAPI", "en": "FastAPI" }, "percentage": 0.4, "endText": "40%" },
-    { "text": { "es": "Laravel", "en": "Laravel" }, "percentage": 0.2, "endText": "20%", "icon": "/images/laravel-icon.svg" },
-    { "text": { "es": "NestJS", "en": "NestJS" }, "percentage": 0.3, "endText": "30%" },
-    { "text": { "es": "Spring Boot", "en": "Spring Boot" }, "percentage": 0.4, "endText": "40%", "icon": "/images/springboot-icon.svg" }
+    { "text": { "es": "ASP.NET Core", "en": "ASP.NET Core" } },
+    { "text": { "es": "FastAPI", "en": "FastAPI" } },
+    { "text": { "es": "Laravel", "en": "Laravel" } },
+    { "text": { "es": "NestJS", "en": "NestJS" } },
+    { "text": { "es": "Spring Boot", "en": "Spring Boot" } }
   ]
 }

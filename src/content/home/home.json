@@ -79,10 +79,13 @@
       "projectSlugs": ["usales", "uwork", "registrounah-replica"]
     },
     {
+      "type": "skills",
+      "title": { "es": "Habilidades técnicas", "en": "Technical expertise" }
+    },
+    {
       "type": "linkCards",
       "title": { "es": "También puedes ver", "en": "You can also see" },
       "links": [
-        { "label": { "es": "Habilidades", "en": "Skills" }, "href": "/skills" },
         { "label": { "es": "Formación", "en": "Education" }, "href": "/education" },
         { "label": { "es": "Proyectos", "en": "Projects" }, "href": "/projects" }
       ]
