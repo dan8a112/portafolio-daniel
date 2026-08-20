@@ -33,6 +33,7 @@ export type Section =
   | { type: 'linkCards'; title: string; links: { label: string; href: string }[] }
   | { type: 'featuredProjects'; title: string; projectSlugs: string[] }
   | { type: 'highlights'; items: { label: string; value: string; icon?: string }[] }
+  | { type: 'experience'; title: string }
 
 export interface ContentBlock {
   title: string
@@ -75,5 +76,15 @@ export interface AcademicEntry {
   subtitle: string
   period: string
   href?: string
+  order: number
+}
+
+export interface Experience {
+  id: string
+  year: string
+  role: string
+  company: string
+  period: string
+  description: string
   order: number
 }

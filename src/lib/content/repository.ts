@@ -5,6 +5,7 @@ import type {
   Project,
   SkillCategory,
   AcademicEntry,
+  Experience,
 } from '../../types/domain'
 
 export type { Locale }
@@ -16,4 +17,5 @@ export interface ContentRepository {
   getProjectBySlug(slug: string, locale: Locale): Promise<Project | null>
   getSkillCategories(locale: Locale): Promise<SkillCategory[]>
   getAcademic(locale: Locale): Promise<AcademicEntry[]>
+  getExperiences(locale: Locale): Promise<Experience[]>
 }

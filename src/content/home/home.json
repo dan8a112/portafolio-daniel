@@ -45,6 +45,10 @@
       ]
     },
     {
+      "type": "experience",
+      "title": { "es": "Experiencia", "en": "Experience" }
+    },
+    {
       "type": "content",
       "blocks": [
         {

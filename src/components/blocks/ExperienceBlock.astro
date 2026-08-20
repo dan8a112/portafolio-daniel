@@ -1,0 +1,57 @@
+---
+import type { Experience, Section } from "../../types/domain";
+
+interface Props {
+  section: Extract<Section, { type: 'experience' }>;
+  experiences: Experience[];
+}
+
+const { section, experiences } = Astro.props;
+---
+
+<section class="container mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-white mb-10">{section.title}</h2>
+
+  <div class="relative">
+    {
+      experiences.map((experience, index) => (
+        <div class="relative flex items-start gap-8 mb-12 last:mb-0">
+          <!-- Línea azul que conecta con el siguiente círculo -->
+          {index < experiences.length - 1 && (
+            <div
+              class="absolute left-8 top-8 w-px h-[calc(100%+3rem)] bg-primary"
+              aria-hidden="true"
+            ></div>
+          )}
+
+          <!-- Círculo con el año -->
+          <div
+            class="z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/20"
+          >
+            <span class="text-center text-xs font-bold leading-tight text-white">
+              {experience.year}
+            </span>
+          </div>
+
+          <!-- Card de experiencia -->
+          <div class="flex-1 pt-2">
+            <div class="rounded-xl border border-border bg-surface p-6 shadow-md transition-colors hover:border-primary/50">
+              <h3 class="text-xl font-bold text-white">
+                {experience.role}
+              </h3>
+              <p class="mb-3 font-medium text-primary">
+                at {experience.company}
+              </p>
+              <p class="mb-3 text-sm font-medium text-neutral">
+                {experience.period}
+              </p>
+              <p class="leading-relaxed text-neutral">
+                {experience.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

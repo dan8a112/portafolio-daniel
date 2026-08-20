@@ -5,6 +5,7 @@ import type {
   Project,
   SkillCategory,
   AcademicEntry,
+  Experience,
 } from '../../types/domain'
 import type { ContentRepository } from './repository'
 
@@ -47,6 +48,11 @@ export const sanityRepository: ContentRepository = {
 
   async getAcademic(_locale: Locale): Promise<AcademicEntry[]> {
     notImplemented('getAcademic')
+    return []
+  },
+
+  async getExperiences(_locale: Locale): Promise<Experience[]> {
+    notImplemented('getExperiences')
     return []
   },
 }

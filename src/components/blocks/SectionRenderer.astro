@@ -1,17 +1,19 @@
 ---
-import type { Project, Section } from "../../types/domain";
+import type { Experience, Project, Section } from "../../types/domain";
 import HeroBlock from "./HeroBlock.astro";
 import ContentSectionBlock from "./ContentSectionBlock.astro";
 import LinkCardsBlock from "./LinkCardsBlock.astro";
 import FeaturedProjectsBlock from "./FeaturedProjectsBlock.astro";
 import HighlightsBlock from "./HighlightsBlock.astro";
+import ExperienceBlock from "./ExperienceBlock.astro";
 
 interface Props {
   sections: Section[];
   featuredProjects?: Project[];
+  experiences?: Experience[];
 }
 
-const { sections, featuredProjects = [] } = Astro.props;
+const { sections, featuredProjects = [], experiences = [] } = Astro.props;
 ---
 
 {
@@ -27,6 +29,8 @@ const { sections, featuredProjects = [] } = Astro.props;
         return <FeaturedProjectsBlock section={section} projects={featuredProjects} />;
       case 'highlights':
         return <HighlightsBlock section={section} />;
+      case 'experience':
+        return <ExperienceBlock section={section} experiences={experiences} />;
       default:
         return null;
     }

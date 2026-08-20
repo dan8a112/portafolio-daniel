@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getHome, getProjects } from "../../lib/content";
+import { getHome, getProjects, getExperiences } from "../../lib/content";
 import SectionRenderer from "../../components/blocks/SectionRenderer.astro";
 
 export function getStaticPaths() {
@@ -8,14 +8,15 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as 'es' | 'en'
-const [home, projects] = await Promise.all([
+const [home, projects, experiences] = await Promise.all([
   getHome(locale),
   getProjects(locale),
+  getExperiences(locale),
 ])
 
-// TODO(rediseño): temporal — se renderizan hero y highlights mientras se rediseña el home.
+// TODO(rediseño): temporal — se renderizan hero, highlights y experience mientras se rediseña el home.
 const visibleSections = home.sections.filter(
-  (section) => section.type === 'hero' || section.type === 'highlights'
+  (section) => section.type === 'hero' || section.type === 'highlights' || section.type === 'experience'
 )
 ---
 
@@ -23,5 +24,6 @@ const visibleSections = home.sections.filter(
   <SectionRenderer
     sections={visibleSections}
     featuredProjects={projects}
+    experiences={experiences}
   />
 </Layout>

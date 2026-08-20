@@ -63,6 +63,10 @@ const sectionSchema = z.discriminatedUnion('type', [
       })
     ),
   }),
+  z.object({
+    type: z.literal('experience'),
+    title: localizedText,
+  }),
 ])
 
 const site = defineCollection({
@@ -135,10 +139,24 @@ const academic = defineCollection({
   }),
 })
 
+const experience = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/experience' }),
+  schema: z.object({
+    id: z.string(),
+    year: z.string(),
+    role: localizedText,
+    company: localizedText,
+    period: localizedText,
+    description: localizedText,
+    order: z.number(),
+  }),
+})
+
 export const collections = {
   site,
   home,
   projects,
   skillCategory,
   academic,
+  experience,
 }

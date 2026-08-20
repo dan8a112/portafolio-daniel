@@ -8,6 +8,7 @@ import type {
   Project,
   SkillCategory,
   AcademicEntry,
+  Experience,
 } from '../../types/domain'
 import type { ContentRepository } from './repository'
 
@@ -99,6 +100,11 @@ async function loadHome(locale: Locale): Promise<HomePage> {
             icon: item.icon,
           })),
         }
+      case 'experience':
+        return {
+          type: 'experience',
+          title: t(section.title, locale),
+        }
       default:
         return section as Section
     }
@@ -160,6 +166,21 @@ async function loadAcademic(locale: Locale): Promise<AcademicEntry[]> {
   }))
 }
 
+async function loadExperiences(locale: Locale): Promise<Experience[]> {
+  const entries = await getCollection('experience')
+  return entries
+    .map((entry) => ({
+      id: entry.data.id,
+      year: entry.data.year,
+      role: entry.data.role[locale],
+      company: entry.data.company[locale],
+      period: entry.data.period[locale],
+      description: entry.data.description[locale],
+      order: entry.data.order,
+    }))
+    .sort((a, b) => a.order - b.order)
+}
+
 export const localRepository: ContentRepository = {
   async getSite(locale) {
     return loadSite(locale)
@@ -185,5 +206,9 @@ export const localRepository: ContentRepository = {
 
   async getAcademic(locale) {
     return loadAcademic(locale)
+  },
+
+  async getExperiences(locale) {
+    return loadExperiences(locale)
   },
 }

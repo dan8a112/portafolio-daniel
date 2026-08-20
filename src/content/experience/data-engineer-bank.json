@@ -1,0 +1,21 @@
+{
+  "id": "data-engineer-bank",
+  "year": "2024",
+  "role": {
+    "es": "Analista de Datos / Ingeniero de Datos",
+    "en": "Data Analyst / Data Engineer"
+  },
+  "company": {
+    "es": "Sector Bancario",
+    "en": "Banking Sector"
+  },
+  "period": {
+    "es": "2024 - Presente",
+    "en": "2024 - Present"
+  },
+  "description": {
+    "es": "Diseño y construcción de soluciones de datos en la nube con Databricks, SQL y PySpark. Implementación de arquitectura Medallion, limpieza de datos y desarrollo de dashboards para la toma de decisiones en áreas de crédito y riesgo.",
+    "en": "Design and implementation of cloud data solutions using Databricks, SQL and PySpark. Medallion architecture, data cleansing and dashboard development to support decision-making in credit and risk areas."
+  },
+  "order": 1
+}
