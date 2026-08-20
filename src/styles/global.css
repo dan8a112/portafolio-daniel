@@ -1,11 +1,29 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Paleta de colores — tema oscuro (por defecto).
+   Para añadir un tema claro más adelante, sobreescribir estas
+   mismas variables dentro de un bloque [data-theme="light"].
+   ============================================================ */
+:root {
+    --palette-primary: #2563eb;
+    --palette-neutral: #94a3b8;
+    --palette-white: #e2e8f0;
+    --palette-black: #0e141b;
+
+    /* Tonalidades derivadas para tarjetas y bordes */
+    --palette-surface: #161f2c;
+    --palette-border: #27364a;
+}
+
 @theme {
-    --color-primary-white: oklch(100% 0 0);
-    --color-secondary-yellow: oklch(81.55% 0.11 58.69);
-    --color-tertiary-lightblue: oklch(55.36% 0.0722 276.19);
-    --color-background-blue: oklch(32.7% 0.0536 275.81);
-    --color-background-bluedark: oklch(28.95% 0.0461 276.19);
+    --color-primary: var(--palette-primary);
+    --color-neutral: var(--palette-neutral);
+    --color-white: var(--palette-white);
+    --color-black: var(--palette-black);
+
+    --color-surface: var(--palette-surface);
+    --color-border: var(--palette-border);
 }
 
 /* Animación para la imagen */

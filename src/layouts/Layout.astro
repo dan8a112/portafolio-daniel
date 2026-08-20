@@ -20,7 +20,7 @@ const canonicalPath = Astro.url.pathname
 			<link rel="alternate" hreflang={lang} href={Astro.site ? new URL(getLocalizedPathname(canonicalPath, lang), Astro.site).href : getLocalizedPathname(canonicalPath, lang)} />
 		))}
 	</head>
-	<body class="bg-background-blue">
+	<body class="bg-black">
 		<Header />
 		<slot />
 	</body>

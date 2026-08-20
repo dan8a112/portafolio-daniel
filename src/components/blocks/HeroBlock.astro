@@ -17,18 +17,18 @@ const splitedName = section.name.split(" ");
     <!-- Contenido de texto (izquierda) -->
     <div class="md:w-1/2 space-y-3">
       <div class="animate-fadeInLeft">
-        <span class="text-3xl text-primary-white">{section.greeting}</span>
-        <span class="text-3xl text-secondary-yellow">{section.label}</span>
-        <h2 class="text-4xl font-bold text-secondary-yellow">
+        <span class="text-3xl text-white">{section.greeting}</span>
+        <span class="text-3xl text-primary">{section.label}</span>
+        <h2 class="text-4xl font-bold text-primary">
           {splitedName.map((part) => (
             <span class="mr-2">{part}</span>
           ))}
         </h2>
       </div>
       <div class="animate-fadeInLeft">
-        <span class="text-xl text-primary-white">{section.role}</span>
+        <span class="text-xl text-white">{section.role}</span>
       </div>
-      <p class="text-primary-white text-lg mt-4 mb-5 animate-fadeInLeft" set:html={section.paragraph}></p>
+      <p class="text-white text-lg mt-4 mb-5 animate-fadeInLeft" set:html={section.paragraph}></p>
       <div class="flex flex-row items-center gap-4 animate-fadeInLeft">
         {socials.map((social) => <SocialLink social={social} />)}
       </div>
@@ -41,7 +41,7 @@ const splitedName = section.name.split(" ");
         alt={section.imageAlt}
         width={300}
         height={300}
-        class="rounded-full border-4 border-secondary-yellow object-cover animate-fadeInRight"
+        class="rounded-full border-4 border-primary object-cover animate-fadeInRight"
       />
     </div>
   </div>

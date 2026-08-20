@@ -12,11 +12,11 @@ const splitedTitle = title.split(" ");
       <div class="md:w-1/2 space-y-4">
         <h2 class="text-3xl font-semibold">
             {splitedTitle.map((tlt, index)=>
-                <span class={`${index===0 ? "text-primary-white" : "text-secondary-yellow"} mr-1`}>
+                <span class={`${index===0 ? "text-white" : "text-primary"} mr-1`}>
                     {tlt}
                 </span>)}
         </h2>
-        <p class="text-primary-white text-lg" set:html={paragraph}></p>
+        <p class="text-white text-lg" set:html={paragraph}></p>
       </div>
   
       <!-- Imagen -->

@@ -11,24 +11,24 @@ const { title, categories } = Astro.props;
 
 <section>
   <div class="container mx-auto px-6 flex flex-col">
-    <h2 class="text-3xl font-bold text-primary-white mb-6">{title}</h2>
+    <h2 class="text-3xl font-bold text-white mb-6">{title}</h2>
 
     <div class="flex flex-col md:flex-row flex-wrap gap-8 animate-slideUp">
       {
         categories.map((category) => (
-          <div class="bg-tertiary-lightblue p-6 rounded-lg shadow-md min-w-[350px] max-w-[400px]">
+          <div class="bg-surface p-6 rounded-lg shadow-md min-w-[350px] max-w-[400px]">
             <div class="flex items-center gap-2 mb-4">
               <span
-                class="text-secondary-yellow shrink-0"
+                class="text-primary shrink-0"
                 set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${category.icon ?? ""}</svg>`}
               />
-              <p class="text-xl font-semibold text-primary-white">{category.title}</p>
+              <p class="text-xl font-semibold text-white">{category.title}</p>
             </div>
 
             <div class="flex flex-wrap gap-2">
               {
                 category.items.map((skill) => (
-                  <span class="bg-background-blue text-primary-white text-sm px-3 py-1 rounded-full">
+                  <span class="bg-black text-white text-sm px-3 py-1 rounded-full">
                     {skill.text}
                   </span>
                 ))

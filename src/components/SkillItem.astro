@@ -7,7 +7,7 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = useTranslations(locale);
 ---
 
-<div class="bg-tertiary-lightblue p-4 rounded-lg shadow-md">
+<div class="bg-surface p-4 rounded-lg shadow-md">
   <!-- Contenido superior: Ícono, texto y porcentaje -->
   <div class="flex justify-between items-center mb-4">
     <div class="flex items-center space-x-4">
@@ -18,16 +18,16 @@ const t = useTranslations(locale);
         )
       }
       <!-- Texto -->
-      <span class="text-lg text-primary-white">{text}</span>
+      <span class="text-lg text-white">{text}</span>
     </div>
     <!-- Porcentaje -->
-    <span class="text-lg text-primary-white">{endText}</span>
+    <span class="text-lg text-white">{endText}</span>
   </div>
 
   <!-- Barra de progreso -->
-  <div class="w-full bg-gray-200 rounded-full h-2">
+  <div class="w-full bg-border rounded-full h-2">
     <div
-      class="bg-secondary-yellow h-2 rounded-full transition-all duration-1000"
+      class="bg-primary h-2 rounded-full transition-all duration-1000"
       style={`width: ${percentage * 100}%;`}
     >
     </div>

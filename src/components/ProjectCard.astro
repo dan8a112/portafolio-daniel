@@ -8,7 +8,7 @@ const localizedHref = localizePath(href, locale);
 const t = useTranslations(locale);
 ---
 
-<div class="bg-background-bluedark p-6 shadow-md rounded-xl animate-fadeInLeft">
+<div class="bg-surface p-6 shadow-md rounded-xl animate-fadeInLeft">
     <div class="flex flex-col md:flex-row items-center gap-5">
         <!--Imagen -->
         <Image 
@@ -19,14 +19,14 @@ const t = useTranslations(locale);
         class="rounded-lg shadow-lg"/>
 
         <div class="flex flex-col">
-            <h2 class="text-2xl text-secondary-yellow mb-2">{title}</h2>
-            <p class="text-md text-primary-white mb-3">{description}</p>
+            <h2 class="text-2xl text-primary mb-2">{title}</h2>
+            <p class="text-md text-white mb-3">{description}</p>
             <div class="flex items-center gap-3 flex-wrap mb-5">
-                {skills.map(skill=> (<div class="px-3 py-1 rounded-2xl border border-primary-white text-primary-white">{skill}</div>))}
+                {skills.map(skill=> (<div class="px-3 py-1 rounded-2xl border border-white text-white">{skill}</div>))}
             </div>
             <div class="flex justify-end">
                 <a href={localizedHref}>
-                    <div class="px-4 py-2 border-none bg-secondary-yellow rounded-xl text-background-bluedark">{t('project.seeMore')}</div>
+                    <div class="px-4 py-2 border-none bg-primary rounded-xl text-white">{t('project.seeMore')}</div>
                 </a>
             </div>
         </div>

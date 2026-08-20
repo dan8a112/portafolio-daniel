@@ -31,16 +31,16 @@ const t = useTranslations(locale);
 
 <Layout>
     <div class="max-w-4xl mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-secondary-yellow mb-4">{entry.data.title}</h1>
-        <p class="text-xl text-primary-white mb-8">{entry.data.description}</p>
+        <h1 class="text-4xl font-bold text-primary mb-4">{entry.data.title}</h1>
+        <p class="text-xl text-white mb-8">{entry.data.description}</p>
     
-        <nav class="toc mb-8 bg-background-bluedark p-5 rounded-lg w-[50%]">
-          <h2 class="text-2xl font-semibold mb-4 text-secondary-yellow">{t('project.toc')}</h2>
+        <nav class="toc mb-8 bg-surface p-5 rounded-lg w-[50%]">
+          <h2 class="text-2xl font-semibold mb-4 text-primary">{t('project.toc')}</h2>
           <ul class="space-y-2">
             {headings.map((heading: any) => (
               <li class={`toc-level-${heading.depth} ml-${(heading.depth - 1) * 4}`}>
-                <span class="text-secondary-yellow">⦿</span>
-                <a href={`#${heading.slug}`} class="text-primary-white hover:text-tertiary-lightblue transition-colors">
+                <span class="text-primary">⦿</span>
+                <a href={`#${heading.slug}`} class="text-white hover:text-primary transition-colors">
                   {heading.text}
                 </a>
               </li>
@@ -48,7 +48,7 @@ const t = useTranslations(locale);
           </ul>
         </nav>
 
-        <article class="text-primary-white">
+        <article class="text-white">
           <Content />
         </article>
       </div>
