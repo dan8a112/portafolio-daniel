@@ -14,46 +14,52 @@ const localizedNav = site.nav.map((item) => ({
 }));
 ---
 
-<header class="bg-surface shadow-md">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Título (lado derecho) -->
-    <a class="flex items-center" href={localizePath('/', locale)}>
-      <Image alt={t('header.logoAlt')} src={"/images/d-logo.svg"} width={30} height={30} class={"mr-3"}></Image>
-      <h1 class="text-2xl font-bold text-white hidden md:block">{site.brand}</h1>
-    </a>
+<header class="sticky top-0 z-50 border-b border-border bg-black/80 backdrop-blur-md">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between gap-4 py-3">
+      <!-- Brand -->
+      <a class="flex items-center gap-3" href={localizePath('/', locale)}>
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface">
+          <Image alt={t('header.logoAlt')} src={"/images/d-logo.svg"} width={20} height={20} class="brightness-0 invert"></Image>
+        </span>
+        <span class="text-lg font-semibold text-white hidden sm:block">{site.brand}</span>
+      </a>
 
-    <!-- Opciones del menú (lado izquierdo) -->
-    <nav class="flex space-x-6 text-white">
-      {
-        localizedNav.map((item) => (
-          <a
-            href={item.href}
-            class={`hover:border-b-1 hover:border-primary transition-colors 
-        ${currentPath === item.href ? "border-b-1 border-primary" : ""}`}
-          >
-            {item.label}
-          </a>
-        ))
-      }
-    </nav>
+      <!-- Nav -->
+      <nav class="flex items-center gap-1">
+        {
+          localizedNav.map((item) => {
+            const isActive = currentPath === item.href;
+            return (
+              <a
+                href={item.href}
+                class={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  isActive ? 'text-white bg-surface' : 'text-neutral hover:text-white'
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })
+        }
+      </nav>
 
-    <!-- Language switcher -->
-    <div class="flex items-center gap-2 ml-4" aria-label={t('lang.switch')}>
-      {
-        locales.map((lang) => (
-          <a
-            href={getLocalizedPathname(currentPath, lang)}
-            class={`px-2 py-1 rounded text-sm font-medium transition-colors ${
-              lang === locale
-                ? 'bg-primary text-white'
-                : 'text-white hover:text-primary'
-            }`}
-            aria-current={lang === locale ? 'true' : undefined}
-          >
-            {t(`lang.${lang}`)}
-          </a>
-        ))
-      }
+      <!-- Language switcher -->
+      <div class="flex items-center rounded-lg border border-border bg-surface p-1" aria-label={t('lang.switch')}>
+        {
+          locales.map((lang) => (
+            <a
+              href={getLocalizedPathname(currentPath, lang)}
+              class={`rounded-md px-3 py-1 text-sm font-medium transition-colors ${
+                lang === locale ? 'bg-primary text-white' : 'text-neutral hover:text-white'
+              }`}
+              aria-current={lang === locale ? 'page' : undefined}
+            >
+              {t(`lang.${lang}`)}
+            </a>
+          ))
+        }
+      </div>
     </div>
   </div>
 </header>

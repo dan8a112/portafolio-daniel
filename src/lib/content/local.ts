@@ -51,6 +51,15 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           label: t(section.label, locale),
           name: section.name,
           role: t(section.role, locale),
+          tagline: t(section.tagline, locale),
+          primaryCta: {
+            label: t(section.primaryCta.label, locale),
+            href: section.primaryCta.href,
+          },
+          secondaryCta: {
+            label: t(section.secondaryCta.label, locale),
+            href: section.secondaryCta.href,
+          },
           paragraph: t(section.paragraph, locale),
           image: section.image,
           imageAlt: t(section.imageAlt, locale),

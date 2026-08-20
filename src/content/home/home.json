@@ -4,14 +4,22 @@
       "type": "hero",
       "greeting": { "es": "Hola,", "en": "Hello," },
       "label": { "es": "soy", "en": "I'm" },
-      "name": "Daniel Ochoa",
-      "role": {
-        "es": "Ingeniero en sistemas con experiencia en desarrollo de software, BI e ingeniería de datos",
-        "en": "Systems engineer with experience in software development, BI and data engineering"
+      "name": "Daniel",
+      "role": { "es": "Ingeniero en sistemas", "en": "Systems Engineer" },
+      "tagline": {
+        "es": "Construyo soluciones de datos y software.",
+        "en": "I build data and software solutions."
+      },
+      "primaryCta": {
+        "label": { "es": "Ver mis proyectos", "en": "View my projects" },
+        "href": "/projects"
+      },
+      "secondaryCta": {
+        "label": { "es": "Descargar CV", "en": "Download CV" }
       },
       "paragraph": {
-        "es": "Construyo soluciones orientadas a datos combinando <strong>ingeniería de datos, analítica y desarrollo de software</strong>, con experiencia práctica en Databricks, SQL, PySpark y Tableau.",
-        "en": "I build data-driven solutions combining <strong>data engineering, analytics and software development</strong>, with hands-on experience in Databricks, SQL, PySpark and Tableau."
+        "es": "Combino <strong>ingeniería, analítica y desarrollo de software</strong>, para transformar información en herramientas útiles para el análisis y la toma de decisiones, con experiencia práctica en Databricks, SQL, PySpark y Tableau.",
+        "en": "I combine <strong>engineering, analytics, and software development</strong>, transforming information into useful tools for analysis and decision-making, with hands-on experience in Databricks, SQL, PySpark, and Tableau."
       },
       "image": "/images/daniel.jpg",
       "imageAlt": { "es": "Daniel Ochoa", "en": "Daniel Ochoa" }

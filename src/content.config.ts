@@ -21,6 +21,15 @@ const sectionSchema = z.discriminatedUnion('type', [
     label: localizedText,
     name: z.string(),
     role: localizedText,
+    tagline: localizedText,
+    primaryCta: z.object({
+      label: localizedText,
+      href: z.string(),
+    }),
+    secondaryCta: z.object({
+      label: localizedText,
+      href: z.string().optional(),
+    }),
     paragraph: localizedText,
     image: z.string(),
     imageAlt: localizedText,

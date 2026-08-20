@@ -8,17 +8,16 @@ import FeaturedProjectsBlock from "./FeaturedProjectsBlock.astro";
 interface Props {
   sections: Section[];
   featuredProjects?: Project[];
-  socials?: { icon: string; url: string; altText: string }[];
 }
 
-const { sections, featuredProjects = [], socials = [] } = Astro.props;
+const { sections, featuredProjects = [] } = Astro.props;
 ---
 
 {
   sections.map((section) => {
     switch (section.type) {
       case 'hero':
-        return <HeroBlock section={section} socials={socials} />;
+        return <HeroBlock section={section} />;
       case 'content':
         return <ContentSectionBlock section={section} />;
       case 'linkCards':

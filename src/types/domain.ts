@@ -22,6 +22,9 @@ export type Section =
       label: string
       name: string
       role: string
+      tagline: string
+      primaryCta: { label: string; href: string }
+      secondaryCta: { label: string; href?: string }
       paragraph: string
       image: string
       imageAlt: string
