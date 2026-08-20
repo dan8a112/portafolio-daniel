@@ -1,0 +1,21 @@
+{
+  "id": "bcie-data-management",
+  "year": "2026",
+  "role": {
+    "es": "Practicante Universitario en Gestión de Datos",
+    "en": "University Intern in Data Management"
+  },
+  "company": {
+    "es": "Banco Centroamericano de Integración Económica — BCIE",
+    "en": "Central American Bank for Economic Integration — CABEI"
+  },
+  "period": {
+    "es": "Arquitectura y Gestión de Datos · 2026",
+    "en": "Data Architecture and Management · 2026"
+  },
+  "description": {
+    "es": "Trabajé en validación y soporte de soluciones analíticas con Tableau y SQL, documentación y gobierno de datos, y en una prueba de concepto de ingeniería de datos con Databricks y arquitectura Medallion.",
+    "en": "I worked on validation and support for analytical solutions with Tableau and SQL, data documentation and governance, and a data engineering proof of concept with Databricks and Medallion architecture."
+  },
+  "order": 1
+}

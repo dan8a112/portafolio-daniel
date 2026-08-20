@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@reference "./global.css";
 
 article h1 { @apply text-3xl font-bold text-primary mb-4 mt-8; }
 article h2 { @apply text-2xl font-semibold text-primary mb-4 mt-8; }

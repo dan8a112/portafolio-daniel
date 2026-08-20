@@ -1,0 +1,21 @@
+{
+  "id": "unah-software-developer",
+  "year": "2025",
+  "role": {
+    "es": "Desarrollador de Software",
+    "en": "Software Developer"
+  },
+  "company": {
+    "es": "Universidad Nacional Autónoma de Honduras — UNAH",
+    "en": "Universidad Nacional Autónoma de Honduras — UNAH"
+  },
+  "period": {
+    "es": "Departamento de Ingeniería en Sistemas · 2025",
+    "en": "Systems Engineering Department · 2025"
+  },
+  "description": {
+    "es": "Participé en el desarrollo de un Sistema Gestor de Procesos institucional, trabajando principalmente en frontend, experiencia de usuario, autenticación y lógica de procesos con React y TypeScript.",
+    "en": "I participated in the development of an institutional Process Management System, working primarily on frontend development, user experience, authentication, and process logic with React and TypeScript."
+  },
+  "order": 2
+}
