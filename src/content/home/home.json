@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "type": "hero",
+      "greeting": { "es": "Hola,", "en": "Hello," },
+      "label": { "es": "soy", "en": "I'm" },
+      "name": "Daniel Ochoa",
+      "role": {
+        "es": "Ingeniero en sistemas con experiencia en desarrollo de software, BI e ingeniería de datos",
+        "en": "Systems engineer with experience in software development, BI and data engineering"
+      },
+      "paragraph": {
+        "es": "Construyo soluciones orientadas a datos combinando <strong>ingeniería de datos, analítica y desarrollo de software</strong>, con experiencia práctica en Databricks, SQL, PySpark y Tableau.",
+        "en": "I build data-driven solutions combining <strong>data engineering, analytics and software development</strong>, with hands-on experience in Databricks, SQL, PySpark and Tableau."
+      },
+      "image": "/images/daniel.jpg",
+      "imageAlt": { "es": "Daniel Ochoa", "en": "Daniel Ochoa" }
+    },
+    {
+      "type": "content",
+      "blocks": [
+        {
+          "title": { "es": "Trayectoria profesional", "en": "Professional background" },
+          "paragraph": {
+            "es": "He trabajado tanto en <strong>desarrollo web</strong>, abarcando frontend y backend, como en proyectos de <strong>analítica e ingeniería de datos</strong>, utilizando tecnologías como SQL, Python, Databricks y Tableau. Estas experiencias me han permitido ampliar mi perfil técnico, comprender distintas etapas del ciclo de desarrollo y procesamiento de datos, y fortalecer habilidades como el <strong>trabajo en equipo y la resolución de problemas</strong>.",
+            "en": "I have worked in both <strong>web development</strong>, covering frontend and backend, and in <strong>analytics and data engineering</strong> projects, using technologies such as SQL, Python, Databricks and Tableau. These experiences have allowed me to broaden my technical profile, understand different stages of the development and data processing lifecycle, and strengthen skills such as <strong>teamwork and problem solving</strong>."
+          },
+          "image": "/images/programming-ill.png",
+          "imageAlt": { "es": "Ilustración de programación", "en": "Programming illustration" },
+          "imageRight": false
+        },
+        {
+          "title": { "es": "Ciencia y Libros", "en": "Science and Books" },
+          "paragraph": {
+            "es": "Además de mi pasión por la programación, soy un entusiasta de la <strong>ciencia y la literatura</strong>. Disfruto de un buen café mientras leo libros que van desde <strong>fantasía y ciencia ficción hasta temas científicos</strong> que exploran los misterios del universo. Para mí, la lectura no solo es una fuente de inspiración, sino también una forma de relajarme y mantener mi mente activa.",
+            "en": "Besides my passion for programming, I am an enthusiast of <strong>science and literature</strong>. I enjoy a good cup of coffee while reading books ranging from <strong>fantasy and science fiction to scientific topics</strong> that explore the mysteries of the universe. For me, reading is not only a source of inspiration, but also a way to relax and keep my mind active."
+          },
+          "image": "/images/books-ill.png",
+          "imageAlt": { "es": "Ilustración de ciencia y libros", "en": "Science and books illustration" },
+          "imageRight": true
+        }
+      ]
+    },
+    {
+      "type": "featuredProjects",
+      "title": { "es": "Proyectos destacados", "en": "Featured projects" },
+      "projectSlugs": ["usales", "uwork", "registrounah-replica"]
+    },
+    {
+      "type": "linkCards",
+      "title": { "es": "También puedes ver", "en": "You can also see" },
+      "links": [
+        { "label": { "es": "Habilidades", "en": "Skills" }, "href": "/skills" },
+        { "label": { "es": "Formación", "en": "Education" }, "href": "/education" },
+        { "label": { "es": "Proyectos", "en": "Projects" }, "href": "/projects" }
+      ]
+    }
+  ]
+}

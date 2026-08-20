@@ -1,0 +1,8 @@
+{
+  "kind": "course",
+  "image": "/images/certificates/power-bi-santander.jpg",
+  "title": { "es": "Fundamentos de Power BI", "en": "Power BI Fundamentals" },
+  "subtitle": { "es": "Santander Open Academy", "en": "Santander Open Academy" },
+  "period": { "es": "Agosto 2026", "en": "August 2026" },
+  "order": 303
+}

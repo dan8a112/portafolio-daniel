@@ -1,0 +1,8 @@
+{
+  "kind": "course",
+  "image": "/images/certificates/databricks-fundamentals.png",
+  "title": { "es": "Academy Accreditation: Databricks Fundamentals", "en": "Academy Accreditation: Databricks Fundamentals" },
+  "subtitle": { "es": "Databricks", "en": "Databricks" },
+  "period": { "es": "Marzo 2026", "en": "March 2026" },
+  "order": 301
+}

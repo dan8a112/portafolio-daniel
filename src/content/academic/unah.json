@@ -1,0 +1,8 @@
+{
+  "kind": "education",
+  "image": "/images/unah-logo.jpg",
+  "title": { "es": "Universidad Nacional Autónoma de Honduras", "en": "Universidad Nacional Autónoma de Honduras" },
+  "subtitle": { "es": "Ingeniería en Sistemas", "en": "Systems Engineering" },
+  "period": { "es": "2021-2026", "en": "2021-2026" },
+  "order": 100
+}

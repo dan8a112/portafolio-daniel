@@ -1,0 +1,8 @@
+{
+  "kind": "course",
+  "image": "/images/certificates/tableau-az-udemy.jpg",
+  "title": { "es": "Tableau de la A a la Z: Domina Tableau", "en": "Tableau from A to Z: Master Tableau" },
+  "subtitle": { "es": "Udemy", "en": "Udemy" },
+  "period": { "es": "Mayo 2026", "en": "May 2026" },
+  "order": 302
+}

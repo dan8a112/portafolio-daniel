@@ -1,0 +1,9 @@
+{
+  "kind": "course",
+  "image": "/images/alura-logo.png",
+  "title": { "es": "Formación Front-end Oracle Next Education", "en": "Front-end Oracle Next Education Training" },
+  "subtitle": { "es": "Oracle & Alura Latam", "en": "Oracle & Alura Latam" },
+  "period": { "es": "Septiembre 2023", "en": "September 2023" },
+  "href": "https://app.aluracursos.com/program/certificate/d6263e57-185f-46d9-ab4b-f2fce591c67e",
+  "order": 306
+}

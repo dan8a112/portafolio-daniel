@@ -1,0 +1,8 @@
+{
+  "kind": "course",
+  "image": "/images/cisco-logo.png",
+  "title": { "es": "Python Essentials 1", "en": "Python Essentials 1" },
+  "subtitle": { "es": "Cisco", "en": "Cisco" },
+  "period": { "es": "Mayo 2024", "en": "May 2024" },
+  "order": 305
+}

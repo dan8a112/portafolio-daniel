@@ -1,0 +1,8 @@
+{
+  "kind": "certification",
+  "image": "/images/certificates/databricks-analyst-cert.png",
+  "title": { "es": "Databricks Certified Data Analyst Associate", "en": "Databricks Certified Data Analyst Associate" },
+  "subtitle": { "es": "Databricks Academy", "en": "Databricks Academy" },
+  "period": { "es": "Agosto 2026 - Agosto 2028", "en": "August 2026 - August 2028" },
+  "order": 200
+}

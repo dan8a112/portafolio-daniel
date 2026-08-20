@@ -1,0 +1,8 @@
+{
+  "kind": "course",
+  "image": "/images/certificates/databricks-aibi-analyst.png",
+  "title": { "es": "Data Analyst Learning Plan: AI/BI Genie & SQL", "en": "Data Analyst Learning Plan: AI/BI Genie & SQL" },
+  "subtitle": { "es": "Databricks", "en": "Databricks" },
+  "period": { "es": "Marzo 2026", "en": "March 2026" },
+  "order": 300
+}
