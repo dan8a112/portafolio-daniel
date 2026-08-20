@@ -4,6 +4,7 @@ import HeroBlock from "./HeroBlock.astro";
 import ContentSectionBlock from "./ContentSectionBlock.astro";
 import LinkCardsBlock from "./LinkCardsBlock.astro";
 import FeaturedProjectsBlock from "./FeaturedProjectsBlock.astro";
+import HighlightsBlock from "./HighlightsBlock.astro";
 
 interface Props {
   sections: Section[];
@@ -24,6 +25,8 @@ const { sections, featuredProjects = [] } = Astro.props;
         return <LinkCardsBlock section={section} />;
       case 'featuredProjects':
         return <FeaturedProjectsBlock section={section} projects={featuredProjects} />;
+      case 'highlights':
+        return <HighlightsBlock section={section} />;
       default:
         return null;
     }

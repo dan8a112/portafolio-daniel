@@ -32,6 +32,7 @@ export type Section =
   | { type: 'content'; blocks: ContentBlock[] }
   | { type: 'linkCards'; title: string; links: { label: string; href: string }[] }
   | { type: 'featuredProjects'; title: string; projectSlugs: string[] }
+  | { type: 'highlights'; items: { label: string; value: string; icon?: string }[] }
 
 export interface ContentBlock {
   title: string

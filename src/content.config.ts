@@ -53,6 +53,16 @@ const sectionSchema = z.discriminatedUnion('type', [
     title: localizedText,
     projectSlugs: z.array(z.string()),
   }),
+  z.object({
+    type: z.literal('highlights'),
+    items: z.array(
+      z.object({
+        label: localizedText,
+        value: localizedText,
+        icon: z.string().optional(),
+      })
+    ),
+  }),
 ])
 
 const site = defineCollection({

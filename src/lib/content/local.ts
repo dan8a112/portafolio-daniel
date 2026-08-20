@@ -90,6 +90,15 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           title: t(section.title, locale),
           projectSlugs: section.projectSlugs,
         }
+      case 'highlights':
+        return {
+          type: 'highlights',
+          items: section.items.map((item: any) => ({
+            label: t(item.label, locale),
+            value: t(item.value, locale),
+            icon: item.icon,
+          })),
+        }
       default:
         return section as Section
     }

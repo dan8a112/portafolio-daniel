@@ -25,6 +25,26 @@
       "imageAlt": { "es": "Daniel Ochoa", "en": "Daniel Ochoa" }
     },
     {
+      "type": "highlights",
+      "items": [
+        {
+          "label": { "es": "Databricks Certified", "en": "Databricks Certified" },
+          "value": { "es": "Data Analyst Associate", "en": "Data Analyst Associate" },
+          "icon": "/images/highlights/databricks.svg"
+        },
+        {
+          "label": { "es": "Sector Bancario · Datos", "en": "Banking · Data" },
+          "value": { "es": "~100 soluciones · PoC Medallion", "en": "~100 solutions · Medallion PoC" },
+          "icon": "/images/highlights/bank.svg"
+        },
+        {
+          "label": { "es": "Data + Software", "en": "Data + Software" },
+          "value": { "es": "Dev · Analytics · Data Engineering", "en": "Dev · Analytics · Data Engineering" },
+          "icon": "/images/highlights/data.svg"
+        }
+      ]
+    },
+    {
       "type": "content",
       "blocks": [
         {

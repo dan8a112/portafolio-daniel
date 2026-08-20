@@ -13,8 +13,10 @@ const [home, projects] = await Promise.all([
   getProjects(locale),
 ])
 
-// TODO(rediseño): temporal — solo se renderiza el hero mientras se rediseña el home.
-const visibleSections = home.sections.filter((section) => section.type === 'hero')
+// TODO(rediseño): temporal — se renderizan hero y highlights mientras se rediseña el home.
+const visibleSections = home.sections.filter(
+  (section) => section.type === 'hero' || section.type === 'highlights'
+)
 ---
 
 <Layout>
