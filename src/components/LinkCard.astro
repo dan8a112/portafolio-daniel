@@ -7,9 +7,9 @@ interface Props {
 const { text, href } = Astro.props as Props;
 ---
 
-<a href={href} class="bg-secondary-yellow px-3 py-1 rounded-lg hover:bg-secondary-yellow transition-all duration-300 hover:scale-95 hover:opacity-80">
+<a href={href} class="bg-primary px-3 py-1 rounded-lg transition-all duration-300 hover:scale-95 hover:opacity-80">
   <div class="flex flex-row justify-between items-center">
-    <span class="text-background-bluedark text-xl mr-5 font-semibold">{text}</span>
+    <span class="text-white text-xl mr-5 font-semibold">{text}</span>
     <img src="/images/next-icon.svg" alt="flecha" class="w-[30px]"/>
   </div>
 </a>

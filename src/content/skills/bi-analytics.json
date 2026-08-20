@@ -1,0 +1,14 @@
+{
+  "id": "bi-analytics",
+  "title": { "es": "BI & Analytics", "en": "BI & Analytics" },
+  "description": {
+    "es": "Análisis y visualización de información para construir soluciones que faciliten la interpretación de datos y la toma de decisiones.",
+    "en": "Analysis and visualization of information to build solutions that make data interpretation and decision-making easier."
+  },
+  "icon": "<path d=\"M3 3v18h18\"/><path d=\"M18 17V9\"/><path d=\"M13 17V5\"/><path d=\"M8 17v-3\"/>",
+  "order": 2,
+  "items": [
+    { "text": { "es": "Tableau", "en": "Tableau" } },
+    { "text": { "es": "Power BI", "en": "Power BI" } }
+  ]
+}

@@ -21,6 +21,15 @@ const sectionSchema = z.discriminatedUnion('type', [
     label: localizedText,
     name: z.string(),
     role: localizedText,
+    tagline: localizedText,
+    primaryCta: z.object({
+      label: localizedText,
+      href: z.string(),
+    }),
+    secondaryCta: z.object({
+      label: localizedText,
+      href: z.string().optional(),
+    }),
     paragraph: localizedText,
     image: z.string(),
     imageAlt: localizedText,
@@ -43,6 +52,46 @@ const sectionSchema = z.discriminatedUnion('type', [
     type: z.literal('featuredProjects'),
     title: localizedText,
     projectSlugs: z.array(z.string()),
+  }),
+  z.object({
+    type: z.literal('highlights'),
+    items: z.array(
+      z.object({
+        label: localizedText,
+        value: localizedText,
+        icon: z.string().optional(),
+      })
+    ),
+  }),
+  z.object({
+    type: z.literal('experience'),
+    title: localizedText,
+  }),
+  z.object({
+    type: z.literal('skills'),
+    title: localizedText,
+  }),
+  z.object({
+    type: z.literal('education'),
+    title: localizedText,
+    educationTitle: localizedText,
+    certificatesTitle: localizedText,
+  }),
+  z.object({
+    type: z.literal('about'),
+    title: localizedText,
+    paragraphs: z.array(localizedText),
+    cta: z.object({
+      label: localizedText,
+      href: z.string(),
+    }),
+    image: z.string(),
+    imageAlt: localizedText,
+  }),
+  z.object({
+    type: z.literal('contact'),
+    title: localizedText,
+    paragraphs: z.array(localizedText),
   }),
 ])
 
@@ -78,6 +127,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.string(),
     image: z.string(),
     skills: z.array(z.string()),
     featured: z.boolean().default(false),
@@ -91,13 +141,12 @@ const skillCategory = defineCollection({
   schema: z.object({
     id: z.string(),
     title: localizedText,
+    description: localizedText,
     icon: z.string().optional(),
+    order: z.number(),
     items: z.array(
       z.object({
         text: localizedText,
-        percentage: z.number(),
-        endText: z.string(),
-        icon: z.string().optional(),
       })
     ),
   }),
@@ -116,10 +165,24 @@ const academic = defineCollection({
   }),
 })
 
+const experience = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/experience' }),
+  schema: z.object({
+    id: z.string(),
+    year: z.string(),
+    role: localizedText,
+    company: localizedText,
+    period: localizedText,
+    description: localizedText,
+    order: z.number(),
+  }),
+})
+
 export const collections = {
   site,
   home,
   projects,
   skillCategory,
   academic,
+  experience,
 }

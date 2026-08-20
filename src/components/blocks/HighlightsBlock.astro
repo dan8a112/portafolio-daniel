@@ -1,0 +1,33 @@
+---
+import type { Section } from "../../types/domain";
+
+interface Props {
+  section: Extract<Section, { type: 'highlights' }>;
+}
+
+const { section } = Astro.props;
+---
+
+<section class="border-y border-border bg-surface">
+  <div class="container mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:divide-x md:divide-border">
+      {
+        section.items.map((item, index) => (
+          <div
+            class={`flex items-center gap-4 px-6 ${
+              index > 0 ? 'md:border-l md:border-border' : ''
+            }`}
+          >
+            {item.icon && (
+              <img src={item.icon} alt="" width="28" height="28" class="shrink-0" />
+            )}
+            <div class="flex flex-col">
+              <span class="text-lg font-bold text-white">{item.label}</span>
+              <span class="text-sm font-medium text-neutral">{item.value}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

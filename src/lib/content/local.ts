@@ -8,6 +8,7 @@ import type {
   Project,
   SkillCategory,
   AcademicEntry,
+  Experience,
 } from '../../types/domain'
 import type { ContentRepository } from './repository'
 
@@ -51,6 +52,15 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           label: t(section.label, locale),
           name: section.name,
           role: t(section.role, locale),
+          tagline: t(section.tagline, locale),
+          primaryCta: {
+            label: t(section.primaryCta.label, locale),
+            href: section.primaryCta.href,
+          },
+          secondaryCta: {
+            label: t(section.secondaryCta.label, locale),
+            href: section.secondaryCta.href,
+          },
           paragraph: t(section.paragraph, locale),
           image: section.image,
           imageAlt: t(section.imageAlt, locale),
@@ -81,6 +91,50 @@ async function loadHome(locale: Locale): Promise<HomePage> {
           title: t(section.title, locale),
           projectSlugs: section.projectSlugs,
         }
+      case 'highlights':
+        return {
+          type: 'highlights',
+          items: section.items.map((item: any) => ({
+            label: t(item.label, locale),
+            value: t(item.value, locale),
+            icon: item.icon,
+          })),
+        }
+      case 'experience':
+        return {
+          type: 'experience',
+          title: t(section.title, locale),
+        }
+      case 'skills':
+        return {
+          type: 'skills',
+          title: t(section.title, locale),
+        }
+      case 'education':
+        return {
+          type: 'education',
+          title: t(section.title, locale),
+          educationTitle: t(section.educationTitle, locale),
+          certificatesTitle: t(section.certificatesTitle, locale),
+        }
+      case 'about':
+        return {
+          type: 'about',
+          title: t(section.title, locale),
+          paragraphs: section.paragraphs.map((paragraph: LocalizedText) => t(paragraph, locale)),
+          cta: {
+            label: t(section.cta.label, locale),
+            href: section.cta.href,
+          },
+          image: section.image,
+          imageAlt: t(section.imageAlt, locale),
+        }
+      case 'contact':
+        return {
+          type: 'contact',
+          title: t(section.title, locale),
+          paragraphs: section.paragraphs.map((paragraph: LocalizedText) => t(paragraph, locale)),
+        }
       default:
         return section as Section
     }
@@ -104,6 +158,7 @@ async function loadProjects(locale: Locale): Promise<Project[]> {
         slug,
         title: entry.data.title,
         description: entry.data.description,
+        category: entry.data.category,
         body: '',
         image: entry.data.image,
         skills: entry.data.skills,
@@ -116,17 +171,18 @@ async function loadProjects(locale: Locale): Promise<Project[]> {
 
 async function loadSkillCategories(locale: Locale): Promise<SkillCategory[]> {
   const entries = await getCollection('skillCategory')
-  return entries.map((entry) => ({
-    id: entry.data.id,
-    title: entry.data.title[locale],
-    icon: entry.data.icon,
-    items: entry.data.items.map((item) => ({
-      text: item.text[locale],
-      percentage: item.percentage,
-      endText: item.endText,
-      icon: item.icon,
-    })),
-  }))
+  return entries
+    .map((entry) => ({
+      id: entry.data.id,
+      title: entry.data.title[locale],
+      description: entry.data.description[locale],
+      icon: entry.data.icon,
+      order: entry.data.order,
+      items: entry.data.items.map((item) => ({
+        text: item.text[locale],
+      })),
+    }))
+    .sort((a, b) => a.order - b.order)
 }
 
 async function loadAcademic(locale: Locale): Promise<AcademicEntry[]> {
@@ -140,6 +196,21 @@ async function loadAcademic(locale: Locale): Promise<AcademicEntry[]> {
     href: entry.data.href,
     order: entry.data.order,
   }))
+}
+
+async function loadExperiences(locale: Locale): Promise<Experience[]> {
+  const entries = await getCollection('experience')
+  return entries
+    .map((entry) => ({
+      id: entry.data.id,
+      year: entry.data.year,
+      role: entry.data.role[locale],
+      company: entry.data.company[locale],
+      period: entry.data.period[locale],
+      description: entry.data.description[locale],
+      order: entry.data.order,
+    }))
+    .sort((a, b) => a.order - b.order)
 }
 
 export const localRepository: ContentRepository = {
@@ -167,5 +238,9 @@ export const localRepository: ContentRepository = {
 
   async getAcademic(locale) {
     return loadAcademic(locale)
+  },
+
+  async getExperiences(locale) {
+    return loadExperiences(locale)
   },
 }

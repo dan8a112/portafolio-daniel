@@ -4,17 +4,73 @@
       "type": "hero",
       "greeting": { "es": "Hola,", "en": "Hello," },
       "label": { "es": "soy", "en": "I'm" },
-      "name": "Daniel Ochoa",
-      "role": {
-        "es": "Ingeniero en sistemas con experiencia en desarrollo de software, BI e ingeniería de datos",
-        "en": "Systems engineer with experience in software development, BI and data engineering"
+      "name": "Daniel",
+      "role": { "es": "Ingeniero en sistemas", "en": "Systems Engineer" },
+      "tagline": {
+        "es": "Construyo soluciones de datos y software.",
+        "en": "I build data and software solutions."
+      },
+      "primaryCta": {
+        "label": { "es": "Ver mis proyectos", "en": "View my projects" },
+        "href": "/projects"
+      },
+      "secondaryCta": {
+        "label": { "es": "Descargar CV", "en": "Download CV" }
       },
       "paragraph": {
-        "es": "Construyo soluciones orientadas a datos combinando <strong>ingeniería de datos, analítica y desarrollo de software</strong>, con experiencia práctica en Databricks, SQL, PySpark y Tableau.",
-        "en": "I build data-driven solutions combining <strong>data engineering, analytics and software development</strong>, with hands-on experience in Databricks, SQL, PySpark and Tableau."
+        "es": "Combino <strong>ingeniería, analítica y desarrollo de software</strong>, para transformar información en herramientas útiles para el análisis y la toma de decisiones, con experiencia práctica en Databricks, SQL, PySpark y Tableau.",
+        "en": "I combine <strong>engineering, analytics, and software development</strong>, transforming information into useful tools for analysis and decision-making, with hands-on experience in Databricks, SQL, PySpark, and Tableau."
       },
       "image": "/images/daniel.jpg",
       "imageAlt": { "es": "Daniel Ochoa", "en": "Daniel Ochoa" }
+    },
+    {
+      "type": "highlights",
+      "items": [
+        {
+          "label": { "es": "Databricks Certified", "en": "Databricks Certified" },
+          "value": { "es": "Data Analyst Associate", "en": "Data Analyst Associate" },
+          "icon": "/images/highlights/databricks.svg"
+        },
+        {
+          "label": { "es": "Sector Bancario · Datos", "en": "Banking · Data" },
+          "value": { "es": "~100 soluciones · PoC Medallion", "en": "~100 solutions · Medallion PoC" },
+          "icon": "/images/highlights/bank.svg"
+        },
+        {
+          "label": { "es": "Data + Software", "en": "Data + Software" },
+          "value": { "es": "Dev · Analytics · Data Engineering", "en": "Dev · Analytics · Data Engineering" },
+          "icon": "/images/highlights/data.svg"
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "title": { "es": "Sobre mí", "en": "About me" },
+      "paragraphs": [
+        {
+          "es": "Mi formación en Ingeniería en Sistemas comenzó alrededor del desarrollo de software, donde adquirí una base sólida en programación, bases de datos, diseño de interfaces y construcción de aplicaciones.",
+          "en": "My Systems Engineering education began with software development, where I built a solid foundation in programming, databases, interface design, and application development."
+        },
+        {
+          "es": "Con el tiempo, mi interés se fue orientando hacia los datos: entender cómo se estructuran, transforman y convierten en información útil. Esa transición se consolidó durante mi experiencia en Arquitectura y Gestión de Datos en el BCIE, trabajando con herramientas como Databricks, SQL, PySpark y Tableau.",
+          "en": "Over time, my interests shifted toward data: understanding how it is structured, transformed, and turned into useful information. That transition was consolidated through my experience in Data Architecture and Management at CABEI, working with tools such as Databricks, SQL, PySpark, and Tableau."
+        },
+        {
+          "es": "Hoy busco combinar ambas perspectivas: <strong>la ingeniería de software y el pensamiento orientado a datos</strong>, para construir soluciones que no solo funcionen, sino que ayuden a comprender información y tomar mejores decisiones.",
+          "en": "Today, I seek to combine both perspectives: <strong>software engineering and data-oriented thinking</strong>, to build solutions that not only work, but also help people understand information and make better decisions."
+        }
+      ],
+      "cta": {
+        "label": { "es": "Conocer más sobre mí", "en": "Get to know me" },
+        "href": "#experience"
+      },
+      "image": "/images/programming-ill.png",
+      "imageAlt": { "es": "Ilustración de programación", "en": "Programming illustration" }
+    },
+    {
+      "type": "experience",
+      "title": { "es": "Experiencia", "en": "Experience" }
     },
     {
       "type": "content",
@@ -47,10 +103,33 @@
       "projectSlugs": ["usales", "uwork", "registrounah-replica"]
     },
     {
+      "type": "skills",
+      "title": { "es": "Áreas en las que trabajo", "en": "Areas I work in" }
+    },
+    {
+      "type": "education",
+      "title": { "es": "Formación y certificaciones", "en": "Education and certifications" },
+      "educationTitle": { "es": "Formación", "en": "Education" },
+      "certificatesTitle": { "es": "Certificados", "en": "Certificates" }
+    },
+    {
+      "type": "contact",
+      "title": { "es": "¿Hablamos?", "en": "Let's talk" },
+      "paragraphs": [
+        {
+          "es": "Actualmente estoy interesado en oportunidades relacionadas con <strong>Data Engineering, BI y Analytics</strong>, donde pueda seguir combinando datos, tecnología y desarrollo de soluciones.",
+          "en": "I am currently interested in opportunities related to <strong>Data Engineering, BI, and Analytics</strong>, where I can continue combining data, technology, and solution development."
+        },
+        {
+          "es": "Si crees que mi perfil puede encajar en tu equipo o proyecto, estaré encantado de conversar.",
+          "en": "If you think my profile could be a good fit for your team or project, I would be happy to talk."
+        }
+      ]
+    },
+    {
       "type": "linkCards",
       "title": { "es": "También puedes ver", "en": "You can also see" },
       "links": [
-        { "label": { "es": "Habilidades", "en": "Skills" }, "href": "/skills" },
         { "label": { "es": "Formación", "en": "Education" }, "href": "/education" },
         { "label": { "es": "Proyectos", "en": "Projects" }, "href": "/projects" }
       ]

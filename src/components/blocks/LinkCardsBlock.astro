@@ -12,7 +12,7 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 ---
 
 <section class="container mx-auto px-6 pb-6 pt-5">
-  <h2 class="text-3xl mb-6 text-primary-white">{section.title}</h2>
+  <h2 class="text-3xl mb-6 text-white">{section.title}</h2>
   <div class="flex flex-col md:flex-row gap-6">
     {section.links.map((link) => (
       <LinkCard text={link.label} href={localizePath(link.href, locale)} />

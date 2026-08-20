@@ -33,7 +33,7 @@ Collections: `site`, `home` (JSON singletons), `projects` (MDX), `skillCategory`
 
 ## Styling
 
-- Tailwind 4 via `@tailwindcss/vite`; there is **no `tailwind.config`** — design tokens are `@theme` vars in `src/styles/global.css` (`primary-white`, `secondary-yellow`, `tertiary-lightblue`, `background-blue`, `background-bluedark`). Custom animations: `.animate-fadeInRight`, `.animate-fadeInLeft`, `.animate-slideUp`, `.animate-slideUp-delayed`.
+- Tailwind 4 via `@tailwindcss/vite`; there is **no `tailwind.config`** — design tokens live in `src/styles/global.css`: base palette (`--palette-primary`, `--palette-neutral`, `--palette-white`, `--palette-black`) plus derived tones (`--palette-surface`, `--palette-border`), mapped to Tailwind utilities inside `@theme` (`primary`, `neutral`, `white`, `black`, `surface`, `border`). Dark theme by default; a future light theme overrides the `--palette-*` vars in a `[data-theme="light"]` block. Custom animations: `.animate-fadeInRight`, `.animate-fadeInLeft`, `.animate-slideUp`, `.animate-slideUp-delayed`.
 
 ## Notes
 

@@ -1,30 +1,51 @@
 ---
-import type { Project, Section } from "../../types/domain";
+import type { AcademicEntry, Experience, Project, Section, Site, SkillCategory } from "../../types/domain";
 import HeroBlock from "./HeroBlock.astro";
 import ContentSectionBlock from "./ContentSectionBlock.astro";
 import LinkCardsBlock from "./LinkCardsBlock.astro";
 import FeaturedProjectsBlock from "./FeaturedProjectsBlock.astro";
+import HighlightsBlock from "./HighlightsBlock.astro";
+import ExperienceBlock from "./ExperienceBlock.astro";
+import SkillsBlock from "./SkillsBlock.astro";
+import EducationBlock from "./EducationBlock.astro";
+import AboutBlock from "./AboutBlock.astro";
+import ContactBlock from "./ContactBlock.astro";
 
 interface Props {
   sections: Section[];
   featuredProjects?: Project[];
-  socials?: { icon: string; url: string; altText: string }[];
+  experiences?: Experience[];
+  skillCategories?: SkillCategory[];
+  academic?: AcademicEntry[];
+  site?: Site;
 }
 
-const { sections, featuredProjects = [], socials = [] } = Astro.props;
+const { sections, featuredProjects = [], experiences = [], skillCategories = [], academic = [], site } = Astro.props;
 ---
 
 {
   sections.map((section) => {
     switch (section.type) {
       case 'hero':
-        return <HeroBlock section={section} socials={socials} />;
+        return <HeroBlock section={section} />;
       case 'content':
         return <ContentSectionBlock section={section} />;
       case 'linkCards':
         return <LinkCardsBlock section={section} />;
       case 'featuredProjects':
         return <FeaturedProjectsBlock section={section} projects={featuredProjects} />;
+      case 'highlights':
+        return <HighlightsBlock section={section} />;
+      case 'experience':
+        return <ExperienceBlock section={section} experiences={experiences} />;
+      case 'skills':
+        return <SkillsBlock section={section} categories={skillCategories} />;
+      case 'education':
+        return <EducationBlock section={section} academic={academic} />;
+      case 'about':
+        return <AboutBlock section={section} />;
+      case 'contact':
+        return site ? <ContactBlock section={section} site={site} /> : null;
       default:
         return null;
     }

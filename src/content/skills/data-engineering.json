@@ -1,0 +1,17 @@
+{
+  "id": "data-engineering",
+  "title": { "es": "Data Engineering", "en": "Data Engineering" },
+  "description": {
+    "es": "Diseño y desarrollo de flujos de datos orientados a ingesta, transformación, calidad y organización de información.",
+    "en": "Design and development of data pipelines focused on ingestion, transformation, quality, and information organization."
+  },
+  "icon": "<path d=\"M3 3v18h18\"/><path d=\"M18 17V9\"/><path d=\"M13 17V5\"/><path d=\"M8 17v-3\"/>",
+  "order": 1,
+  "items": [
+    { "text": { "es": "Databricks", "en": "Databricks" } },
+    { "text": { "es": "PySpark", "en": "PySpark" } },
+    { "text": { "es": "SQL", "en": "SQL" } },
+    { "text": { "es": "Medallion Architecture", "en": "Medallion Architecture" } },
+    { "text": { "es": "Microsoft Purview", "en": "Microsoft Purview" } }
+  ]
+}

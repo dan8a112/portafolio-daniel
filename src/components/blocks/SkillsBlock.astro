@@ -1,0 +1,47 @@
+---
+import type { Section, SkillCategory } from "../../types/domain";
+
+interface Props {
+  section: Extract<Section, { type: 'skills' }>;
+  categories: SkillCategory[];
+}
+
+const { section, categories } = Astro.props;
+---
+
+<section class="bg-surface">
+  <div class="container mx-auto px-6 py-16">
+    <h2 class="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
+      {section.title}
+    </h2>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {
+      categories.map((category) => (
+        <article class="rounded-xl border border-border bg-black p-6 shadow-md">
+          <div class="mb-5 flex items-center gap-3">
+            {category.icon && (
+              <span
+                class="shrink-0 text-primary"
+                aria-hidden="true"
+                set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${category.icon}</svg>`}
+              />
+            )}
+            <h3 class="text-xl font-semibold text-white">{category.title}</h3>
+          </div>
+
+          <p class="mb-5 text-sm leading-relaxed text-neutral">{category.description}</p>
+
+          <div class="flex flex-wrap gap-2">
+            {category.items.map((skill) => (
+              <span class="rounded-full border border-primary px-3 py-1 text-sm font-medium text-neutral">
+                {skill.text}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+    </div>
+  </div>
+</section>

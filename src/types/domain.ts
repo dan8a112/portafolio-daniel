@@ -22,6 +22,9 @@ export type Section =
       label: string
       name: string
       role: string
+      tagline: string
+      primaryCta: { label: string; href: string }
+      secondaryCta: { label: string; href?: string }
       paragraph: string
       image: string
       imageAlt: string
@@ -29,6 +32,19 @@ export type Section =
   | { type: 'content'; blocks: ContentBlock[] }
   | { type: 'linkCards'; title: string; links: { label: string; href: string }[] }
   | { type: 'featuredProjects'; title: string; projectSlugs: string[] }
+  | { type: 'highlights'; items: { label: string; value: string; icon?: string }[] }
+  | { type: 'experience'; title: string }
+  | { type: 'skills'; title: string }
+  | { type: 'education'; title: string; educationTitle: string; certificatesTitle: string }
+  | {
+      type: 'about'
+      title: string
+      paragraphs: string[]
+      cta: { label: string; href: string }
+      image: string
+      imageAlt: string
+    }
+  | { type: 'contact'; title: string; paragraphs: string[] }
 
 export interface ContentBlock {
   title: string
@@ -42,6 +58,7 @@ export interface Project {
   slug: string
   title: string
   description: string
+  category: string
   body: string
   image: string
   skills: string[]
@@ -53,15 +70,14 @@ export interface Project {
 export interface SkillCategory {
   id: string
   title: string
+  description: string
   icon?: string
+  order: number
   items: SkillItem[]
 }
 
 export interface SkillItem {
   text: string
-  percentage: number
-  endText: string
-  icon?: string
 }
 
 export interface AcademicEntry {
@@ -71,5 +87,15 @@ export interface AcademicEntry {
   subtitle: string
   period: string
   href?: string
+  order: number
+}
+
+export interface Experience {
+  id: string
+  year: string
+  role: string
+  company: string
+  period: string
+  description: string
   order: number
 }

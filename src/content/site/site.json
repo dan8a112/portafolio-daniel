@@ -2,20 +2,24 @@
   "brand": "Daniel Ochoa",
   "nav": [
     { "label": { "es": "Inicio", "en": "Home" }, "href": "/" },
-    { "label": { "es": "Habilidades", "en": "Skills" }, "href": "/skills" },
     { "label": { "es": "Formación", "en": "Education" }, "href": "/education" },
     { "label": { "es": "Proyectos", "en": "Projects" }, "href": "/projects" }
   ],
   "socials": [
     {
-      "icon": "/images/github-icon.svg",
-      "url": "https://github.com/dan8a112",
-      "altText": { "es": "Icono de github", "en": "GitHub icon" }
-    },
-    {
       "icon": "/images/linkedin-icon.svg",
       "url": "https://www.linkedin.com/in/daniel-ochoa-is/",
-      "altText": { "es": "Icono de linkedin", "en": "LinkedIn icon" }
+      "altText": { "es": "LinkedIn", "en": "LinkedIn" }
+    },
+    {
+      "icon": "/images/github-icon.svg",
+      "url": "https://github.com/dan8a112",
+      "altText": { "es": "GitHub", "en": "GitHub" }
+    },
+    {
+      "icon": "/images/email-icon.svg",
+      "url": "mailto:danyochoa112@gmail.com",
+      "altText": { "es": "Correo electrónico", "en": "Email" }
     }
   ]
 }
